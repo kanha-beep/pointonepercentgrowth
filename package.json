@@ -1,0 +1,12 @@
+{
+  "name": "apniwebsite",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Portfolio website business with React frontend and Node/Express backend.",
+  "scripts": {
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  }
+}
