@@ -226,17 +226,17 @@ function Footer({ content }: { content: SiteContent }) {
 
 function FloatingContact() {
   return (
-    <div className="fixed bottom-3 left-3 right-3 z-40 flex flex-col gap-3 sm:bottom-[18px] sm:left-auto sm:right-[18px] sm:w-auto w-auto">
+    <div className="fixed bottom-3 left-3 right-3 z-40 flex flex-col items-end gap-3 sm:bottom-[18px] sm:left-auto sm:right-[18px] w-auto">
       <a
         aria-label="WhatsApp"
-        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 text-[1.1rem] shadow-soft sm:m-auto"
+        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft"
         href={`https://wa.me/${siteContent.contact.whatsappNumber}?text=${encodeURIComponent(siteContent.contact.whatsappText)}`}
       >
         <span aria-hidden="true">💬</span>
       </a>
       <a
         aria-label="Call Now"
-        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 text-[1.1rem] shadow-soft sm:w-auto"
+        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft"
         href={siteContent.contact.phoneHref}
       >
         <span aria-hidden="true">📞</span>
