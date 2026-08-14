@@ -102,7 +102,7 @@ export default function HomePage() {
       <MatchDeveloperSection />
       <OfficeShowcase office={content.office} contact={content.contact} />
 
-      <section className="bg-white/20 px-0 py-10 pb-[88px] max-[720px]:pb-[72px] max-[720px]:pt-8">
+      {/* <section className="bg-white/20 px-0 py-10 pb-[88px] max-[720px]:pb-[72px] max-[720px]:pt-8">
         <div className="mx-auto w-[min(1180px,calc(100%-40px))] max-[720px]:w-[min(100%-28px,1180px)]">
           <Reveal>
             <SectionHeading
@@ -127,7 +127,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <FinalCtaSection />
     </>
