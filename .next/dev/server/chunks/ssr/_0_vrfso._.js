@@ -14,7 +14,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$site$2d$shell$
 ;
 ;
 const metadata = {
-    title: "Sale Portfolio Studio",
+    title: "pointonepercentgrowth",
     description: "Conversion-focused websites for local Indian businesses."
 };
 function RootLayout({ children }) {

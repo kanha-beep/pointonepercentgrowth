@@ -30,7 +30,7 @@ export default function MatchDeveloperSection() {
         <Reveal>
           <div className="mx-auto max-w-[940px] text-center">
             <h2 className="m-0 text-[clamp(2.2rem,4.8vw,4.35rem)] leading-[1.05] tracking-[-0.06em] text-[#171c28]">
-              Get matched with your WordPress developer in under one day
+              Get matched with your Software developer in under one day
             </h2>
           </div>
         </Reveal>
