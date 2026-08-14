@@ -1,6 +1,6 @@
-# apniwebsite
+# pointonepercentgrowth
 
-Full-stack portfolio website for `apniwebsite.com`.
+Full-stack portfolio website for `pointonepercentgrowth.com`.
 
 ## Stack
 

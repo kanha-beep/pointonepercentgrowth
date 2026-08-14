@@ -174,7 +174,7 @@ function Footer({ content }: { content: SiteContent }) {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.9fr_0.9fr_0.9fr_0.9fr]">
           <div className="max-w-[290px]">
             <h3 className="m-0 text-[clamp(2.3rem,3vw,3rem)] leading-none tracking-[-0.05em] text-white">
-              codeable
+              pointonepercentgrowth
             </h3>
             <p className="mt-4 flex items-center gap-2 text-[1.05rem] font-medium text-[#f6ad93]">
               <span className="text-[1rem]">*</span>
