@@ -2,7 +2,7 @@
   "name": "pointonepercentgrowth",
   "private": true,
   "version": "2.0.0",
-  "description": "Sale Portfolio Studio website rebuilt with Next.js and TypeScript.",
+  "description": "pointonepercentgrowth website rebuilt with Next.js and TypeScript.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -5,7 +5,7 @@ import { SiteShell } from "@/components/site-shell";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "Sale Portfolio Studio",
+  title: "pointonepercentgrowth",
   description: "Conversion-focused websites for local Indian businesses."
 };
 

@@ -235,7 +235,7 @@ const connectedProjects = connectedCategories.flatMap((category, categoryIndex) 
 );
 
 export const siteContent: SiteContent = {
-  businessName: "Sale Portfolio Studio",
+  businessName: "pointonepercentgrowth",
   tagline: "Conversion-focused websites for local Indian businesses",
   topLabel: "Responsive portfolio. Motion-rich sections. Category-led selling.",
   seoLine: "Designing digital storefronts that make local businesses look premium online.",
@@ -247,7 +247,7 @@ export const siteContent: SiteContent = {
     whatsappText:
       "Hi, I saw your Sale Portfolio website and I want a professional business website.",
     officeLabel: "Studio office",
-    officeName: "Sale Portfolio Studio",
+    officeName: "pointonepercentgrowth",
     officeAddress: "Om Shiv Nagar, Lalghati",
     officeHours: "Mon to Sat, 10:00 AM to 7:30 PM"
   },

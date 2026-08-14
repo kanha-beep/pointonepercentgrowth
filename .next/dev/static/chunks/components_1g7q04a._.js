@@ -32,7 +32,7 @@ const hiringProcessItems = [
     },
     {
         step: "04",
-        title: "The Codeable Academy exam",
+        title: "The pointonepercentgrowth Academy exam",
         description: "A structured assessment helps us verify process discipline, standards awareness, and consistency across more advanced project scenarios."
     },
     {
