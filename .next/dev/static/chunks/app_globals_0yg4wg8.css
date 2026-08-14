@@ -1891,6 +1891,10 @@ button {
   padding: 42px;
 }
 
+.p-3 {
+  padding: .75rem;
+}
+
 .px-0 {
   padding-left: 0;
   padding-right: 0;

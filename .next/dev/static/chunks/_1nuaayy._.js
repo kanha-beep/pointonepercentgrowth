@@ -578,7 +578,7 @@ function FloatingContact() {
         className: "fixed bottom-3 left-3 right-3 z-40 flex flex-col gap-3 sm:bottom-[18px] sm:left-auto sm:right-[18px] sm:w-auto",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                className: "inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-slate-950/10 bg-white/95 px-[18px] py-[13px] text-center font-bold text-slate-950 shadow-soft sm:min-w-[146px]",
+                className: "inline-flex min-w-0 items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft sm:min-w-[146px]",
                 href: `https://wa.me/${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteContent"].contact.whatsappNumber}?text=${encodeURIComponent(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteContent"].contact.whatsappText)}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     "aria-hidden": "true",
@@ -602,7 +602,7 @@ function FloatingContact() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                className: "inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-slate-950/10 bg-white/95 px-[18px] py-[13px] text-center font-bold text-slate-950 shadow-soft sm:min-w-[146px]",
+                className: "inline-flex min-w-0 items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft sm:min-w-[146px]",
                 href: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$site$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["siteContent"].contact.phoneHref,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     "aria-hidden": "true",
@@ -3623,4 +3623,4 @@ module.exports = __turbopack_context__.r("[project]/node_modules/next/dist/clien
 }),
 ]);
 
-//# sourceMappingURL=_1nuaayy._.js.map                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+//# sourceMappingURL=_1nuaayy._.js.map

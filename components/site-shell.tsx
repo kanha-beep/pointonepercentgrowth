@@ -228,7 +228,7 @@ function FloatingContact() {
   return (
     <div className="fixed bottom-3 left-3 right-3 z-40 flex flex-col gap-3 sm:bottom-[18px] sm:left-auto sm:right-[18px] sm:w-auto">
       <a
-        className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-slate-950/10 bg-white/95 px-[18px] py-[13px] text-center font-bold text-slate-950 shadow-soft sm:min-w-[146px]"
+        className="inline-flex min-w-0 items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft sm:min-w-[146px]"
         href={`https://wa.me/${siteContent.contact.whatsappNumber}?text=${encodeURIComponent(siteContent.contact.whatsappText)}`}
       >
         <svg aria-hidden="true" className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -236,7 +236,7 @@ function FloatingContact() {
         </svg>
       </a>
       <a
-        className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-slate-950/10 bg-white/95 px-[18px] py-[13px] text-center font-bold text-slate-950 shadow-soft sm:min-w-[146px]"
+        className="inline-flex min-w-0 items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft sm:min-w-[146px]"
         href={siteContent.contact.phoneHref}
       >
         <svg aria-hidden="true" className="h-4 w-4 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
