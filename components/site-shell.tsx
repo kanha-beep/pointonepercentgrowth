@@ -127,14 +127,14 @@ function Header({ content }: { content: SiteContent }) {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3.5">
+        {/* <div className="flex items-center gap-3.5">
           <a className="hidden min-h-12 items-center justify-center rounded-full bg-gradient-to-br from-[#172334] to-[#26415f] px-5 py-3 text-white shadow-soft transition duration-200 hover:-translate-y-0.5 md:inline-flex" href={`https://wa.me/${content.contact.whatsappNumber}?text=${encodeURIComponent(content.contact.whatsappText)}`}>
             WhatsApp
           </a>
           <button className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-950/10 bg-white/80 px-5 py-3 text-slate-950 transition duration-200 hover:-translate-y-0.5 md:hidden" onClick={() => setOpen((current) => !current)} type="button">
             Menu
           </button>
-        </div>
+        </div> */}
       </div>
       {open ? (
         <div className="border-t border-slate-950/10 bg-[#faf6f0]/95 md:hidden">
