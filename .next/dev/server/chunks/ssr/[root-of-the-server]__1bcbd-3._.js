@@ -429,7 +429,7 @@ const freelancers = [
         location: "Dubai, United Arab Emirates",
         completedProjects: 335,
         joined: "December 2020",
-        specialty: "WordPress architecture",
+        specialty: "Software architecture",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
     },
     {
@@ -453,7 +453,7 @@ const freelancers = [
         location: "Toronto, Canada",
         completedProjects: 58,
         joined: "February 2019",
-        specialty: "Enterprise WordPress builds",
+        specialty: "Enterprise Software builds",
         image: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=900&q=80"
     },
     {

@@ -9,13 +9,13 @@ const hiringProcessItems = [
     step: "01",
     title: "Professional review",
     description:
-      "We begin with a detailed profile and portfolio review, checking communication, client history, and real WordPress delivery experience before moving anyone forward."
+      "We begin with a detailed profile and portfolio review, checking communication, client history, and real Software delivery experience before moving anyone forward."
   },
   {
     step: "02",
     title: "Technical exam",
     description:
-      "Candidates complete a practical screening that tests WordPress fundamentals, theme and plugin judgment, debugging habits, and build quality."
+      "Candidates complete a practical screening that tests Software fundamentals, theme and plugin judgment, debugging habits, and build quality."
   },
   {
     step: "03",
@@ -53,7 +53,7 @@ export default function HiringProcessSection() {
           <div className="mx-auto mb-12 max-w-[760px] text-center">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#be7b3f]">Vetting and hiring</p>
             <h2 className="m-0 text-[clamp(2.2rem,4.7vw,4.4rem)] leading-[1.02] tracking-[-0.06em] text-[#171c28]">
-              How we find the best WordPress experts
+              How we find the best Software experts
             </h2>
             <p className="mt-5 text-[1.05rem] leading-8 text-[#4f5f7d]">Our vetting and hiring process</p>
           </div>

@@ -46,7 +46,7 @@ const footerGroups = [
   {
     title: "Developers",
     links: [
-      { label: "WordPress developers", href: "/projects" },
+      { label: "Software developers", href: "/projects" },
       { label: "WooCommerce developers", href: "/projects" },
       { label: "Apply as an Expert", href: "/contact" }
     ]
@@ -181,7 +181,7 @@ function Footer({ content }: { content: SiteContent }) {
               <span>Build with heart</span>
             </p>
             <p className="mt-6 leading-8 text-white/68">
-              When you absolutely, positively need the highest quality WordPress development work.
+              When you absolutely, positively need the highest quality Software development work.
             </p>
             <div className="mt-7 flex items-center gap-5 text-[#f6ad93]">
               <a aria-label="X" className="transition hover:text-white" href="https://x.com">

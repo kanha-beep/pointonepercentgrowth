@@ -9,7 +9,7 @@ export default function FinalCtaSection() {
         <div className="mx-auto w-[min(1180px,calc(100%-40px))] text-center max-[720px]:w-[min(100%-28px,1180px)]">
           <Reveal>
             <h2 className="m-0 text-[clamp(2.3rem,4.9vw,4.5rem)] leading-[1.04] tracking-[-0.06em] text-[#171c28]">
-              Ready to hire your WordPress developer?
+              Ready to hire your Software developer?
             </h2>
           </Reveal>
 
