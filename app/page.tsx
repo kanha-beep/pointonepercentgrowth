@@ -72,8 +72,8 @@ export default function HomePage() {
             <span>{content.contact.officeName}</span>
             <span>{content.contact.officeAddress}</span>
             <span>{content.contact.officeHours}</span>
-            <span>WhatsApp-first client communication</span>
-            <span>Responsive design for every screen</span>
+            {/* <span>WhatsApp-first client communication</span>
+            <span>Responsive design for every screen</span> */}
           </div>
         </div>
       </section>

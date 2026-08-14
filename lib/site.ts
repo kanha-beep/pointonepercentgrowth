@@ -241,9 +241,9 @@ export const siteContent: SiteContent = {
   seoLine: "Designing digital storefronts that make local businesses look premium online.",
   contact: {
     email: "hello@saleportfolio.in",
-    phoneDisplay: "+91 91313 95725",
-    phoneHref: "tel:+919131395725",
-    whatsappNumber: "919131395725",
+    phoneDisplay: "+91 7999046735",
+    phoneHref: "tel:+7999046735",
+    whatsappNumber: "7999046735",
     whatsappText:
       "Hi, I saw your Sale Portfolio website and I want a professional business website.",
     officeLabel: "Studio office",
