@@ -4,7 +4,8 @@
   "version": "2.0.0",
   "description": "pointonepercentgrowth website rebuilt with Next.js and TypeScript.",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
+    "dev:turbo": "next dev --turbopack",
     "build": "next build",
     "start": "next start"
   },
