@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/enquiries/route": "/api/enquiries",
+  "/api/health/route": "/api/health",
+  "/api/site-content/route": "/api/site-content",
+  "/categories/page": "/categories",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/projects/page": "/projects"
+}
