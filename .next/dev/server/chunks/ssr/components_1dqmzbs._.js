@@ -17,12 +17,12 @@ const hiringProcessItems = [
     {
         step: "01",
         title: "Professional review",
-        description: "We begin with a detailed profile and portfolio review, checking communication, client history, and real WordPress delivery experience before moving anyone forward."
+        description: "We begin with a detailed profile and portfolio review, checking communication, client history, and real Software delivery experience before moving anyone forward."
     },
     {
         step: "02",
         title: "Technical exam",
-        description: "Candidates complete a practical screening that tests WordPress fundamentals, theme and plugin judgment, debugging habits, and build quality."
+        description: "Candidates complete a practical screening that tests Software fundamentals, theme and plugin judgment, debugging habits, and build quality."
     },
     {
         step: "03",
@@ -66,7 +66,7 @@ function HiringProcessSection() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "m-0 text-[clamp(2.2rem,4.7vw,4.4rem)] leading-[1.02] tracking-[-0.06em] text-[#171c28]",
-                                children: "How we find the best WordPress experts"
+                                children: "How we find the best Software experts"
                             }, void 0, false, {
                                 fileName: "[project]/components/HiringProcessSection.tsx",
                                 lineNumber: 55,

@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto flex min-h-[560px] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center text-center max-[720px]:min-h-[480px] max-[720px]:w-[min(100%-28px,1180px)]">
           <Reveal>
             <h1 className="mx-auto max-w-[760px] text-[clamp(3rem,6vw,5.35rem)] font-semibold leading-[0.95] tracking-[-0.065em] text-[#171c28]">
-              Hire top freelance talent on ApniWebiste
+              Hire top freelance talent on PointOncePercentGrowth
             </h1>
             <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">
               Discover and hire top independent talent today.
