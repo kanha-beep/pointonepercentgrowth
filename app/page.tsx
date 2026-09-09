@@ -40,14 +40,18 @@ export default function HomePage() {
           <div className="absolute left-1/2 top-[58%] h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/85 blur-2xl max-[720px]:h-[160px] max-[720px]:w-[160px]" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[560px] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center text-center max-[720px]:min-h-[480px] max-[720px]:w-[min(100%-28px,1180px)]">
+        <div className="relative z-10 mx-auto bg-blue-400 flex min-h-[560px] flex-col items-center justify-center text-center">
           <Reveal>
-            <h1 className="mx-auto max-w-[65rem] text-[clamp(3rem,6vw,5.35rem)] font-semibold leading-[0.95] tracking-[-0.065em] text-[#171c28] ">
+            <div className=" bg-red-400 sm:bg-yellow-300 h-full flex flex-col items-center">
+              <div className="w-[50%]">
+            <h1 className=" bg-green-400 max-w-[65rem] text-[5rem] font-semibold leading-[0.95] text-[#171c28] ">
               Hire top freelance talent on PointOncePercentGrowth
             </h1>
             <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">
               Discover and hire top independent talent today.
             </p>
+             </div>
+            </div>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3.5">
               <Link
                 className="inline-flex min-h-[60px] items-center justify-center rounded-full bg-[#2e374a] px-8 py-3 text-[1.05rem] font-semibold text-white shadow-[0_20px_40px_rgba(64,94,150,0.18)] transition duration-200 hover:-translate-y-0.5"
