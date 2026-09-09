@@ -40,11 +40,11 @@ export default function HomePage() {
           <div className="absolute left-1/2 top-[58%] h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/85 blur-2xl max-[720px]:h-[160px] max-[720px]:w-[160px]" />
         </div>
 
-        <div className="relative z-10 mx-auto bg-blue-400 flex min-h-[560px] flex-col items-center justify-center text-center">
+        <div className="relative z-10 mx-auto flex min-h-[560px] flex-col items-center justify-center text-center">
           <Reveal>
-            <div className=" bg-red-400 sm:bg-yellow-300 h-full flex flex-col items-center">
-              <div className="w-[50%]">
-            <h1 className=" bg-green-400 max-w-[65rem] text-[5rem] font-semibold leading-[0.95] text-[#171c28] ">
+            <div className=" h-full flex flex-col items-center">
+              <div className="w-[80%] sm:bg-red-400">
+            <h1 className=" text-[5rem] font-semibold leading-[0.95] text-[#171c28]">
               Hire top freelance talent on PointOncePercentGrowth
             </h1>
             <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">
