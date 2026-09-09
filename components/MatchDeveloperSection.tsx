@@ -38,7 +38,7 @@ export default function MatchDeveloperSection() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3 max-[720px]:mt-10">
           {matchSteps.map((item, index) => (
             <Reveal key={item.step} delay={index * 90}>
-              <article className="min-h-[256px] rounded-[4px] border-t-[8px] border-[#f6ad93] bg-[#192129] px-6 py-7 text-white shadow-[0_18px_40px_rgba(17,24,39,0.18)]">
+              <article className="min-h-[256px] rounded-[4px] border-t-[8px] hover:-translate-y-2 duration-300 hover:shadow-2xl transition-all border-[#f6ad93] bg-[#192129] px-6 py-7 text-white shadow-[0_18px_40px_rgba(17,24,39,0.18)]">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="m-0 text-[clamp(2rem,3vw,3rem)] leading-[0.95] tracking-[-0.05em] text-white">
                     {item.title}

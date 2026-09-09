@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export default function FinalCtaSection() {
   return (
     <section className="px-0 pt-10">
-      <div className="bg-[#f6ad93] px-0 py-[108px] max-[720px]:py-[84px]">
+      <div className="bg-white/20 px-0 py-[108px] max-[720px]:py-[84px]">
         <div className="mx-auto w-[min(1180px,calc(100%-40px))] text-center max-[720px]:w-[min(100%-28px,1180px)]">
           <Reveal>
             <h2 className="m-0 text-[clamp(2.3rem,4.9vw,4.5rem)] leading-[1.04] tracking-[-0.06em] text-[#171c28]">
@@ -24,11 +24,11 @@ export default function FinalCtaSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={180}>
+          {/* <Reveal delay={180}>
             <p className="mt-10 text-[1.02rem] leading-8 text-[#171c28]">
               Free estimate | No obligation to hire | 100% risk-free
             </p>
-          </Reveal>
+          </Reveal> */}
         </div>
       </div>
     </section>

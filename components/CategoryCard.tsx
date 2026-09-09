@@ -13,7 +13,7 @@ const accentClasses: Record<string, string> = {
 export default function CategoryCard({ item }: { item: Category }) {
   return (
     <article className={`rounded-[32px] border border-slate-950/10 p-7 shadow-soft backdrop-blur-xl ${accentClasses[item.accent] || "bg-white/75"}`}>
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex items-start justify-between gap-3 ">
         <span className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/90 px-3.5 py-2 text-[0.8rem] font-bold">{item.name}</span>
         <span className="inline-flex items-center justify-center rounded-full bg-slate-950/5 px-3 py-2 text-[0.8rem] font-bold text-slate-500">{item.audience}</span>
       </div>

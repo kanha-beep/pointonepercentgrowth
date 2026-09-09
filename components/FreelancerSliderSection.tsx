@@ -2,50 +2,50 @@ import Reveal from "@/components/Reveal";
 
 const freelancers = [
   {
-    name: "Ameer Abdullah",
-    location: "Dubai, United Arab Emirates",
-    completedProjects: 335,
-    joined: "December 2020",
-    specialty: "Software architecture",
+    name: "Kanha Gupta",
+    location: "Bhopal, MP, India",
+    completedProjects: 30,
+    joined: "December 2025",
+    specialty: "Software Developer",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
   },
   {
-    name: "Rob Rochford",
-    location: "Manchester, United Kingdom",
-    completedProjects: 141,
-    joined: "September 2021",
-    specialty: "Performance optimization",
+    name: "Jaoa",
+    location: "Brazil",
+    completedProjects: 50,
+    joined: "September 2025",
+    specialty: "Graphic Designer",
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80"
   },
   {
-    name: "Darko Gerguric",
-    location: "Zrenjanin City, Serbia",
-    completedProjects: 133,
-    joined: "June 2020",
-    specialty: "Custom plugin development",
+    name: "Lakshya Gupta",
+    location: "Bhopal, MP, India",
+    completedProjects: 80,
+    joined: "June 2026",
+    specialty: "Graphic Designer",
     image:
       "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80"
   },
-  {
-    name: "Dejan Markovic",
-    location: "Toronto, Canada",
-    completedProjects: 58,
-    joined: "February 2019",
-    specialty: "Enterprise Software builds",
-    image:
-      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    name: "Dragos Nistor",
-    location: "London, United Kingdom",
-    completedProjects: 184,
-    joined: "May 2022",
-    specialty: "WooCommerce systems",
-    image:
-      "https://images.unsplash.com/photo-1506794778191-f55b29a7d72a?auto=format&fit=crop&w=900&q=80"
-  }
+  // {
+  //   name: "Dejan Markovic",
+  //   location: "Toronto, Canada",
+  //   completedProjects: 58,
+  //   joined: "February 2019",
+  //   specialty: "Enterprise Software builds",
+  //   image:
+  //     "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=900&q=80"
+  // },
+  // {
+  //   name: "Dragos Nistor",
+  //   location: "London, United Kingdom",
+  //   completedProjects: 184,
+  //   joined: "May 2022",
+  //   specialty: "WooCommerce systems",
+  //   image:
+  //     "https://images.unsplash.com/photo-1506794778191-f55b29a7d72a?auto=format&fit=crop&w=900&q=80"
+  // }
 ] as const;
 
 function LocationPin() {

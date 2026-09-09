@@ -56,11 +56,11 @@ export default function ContactSection({ content }: { content: SiteContent }) {
     <section className="px-0 py-10 pb-[88px] max-[720px]:pb-[72px] max-[720px]:pt-8">
       <div className="mx-auto grid w-[min(1180px,calc(100%-40px))] items-start gap-7 lg:grid-cols-[1.05fr_0.95fr] max-[720px]:w-[min(100%-28px,1180px)]">
         <Reveal>
-          <SectionHeading eyebrow="Contact" title="Let clients see the quality, then contact you instantly." description="Use the form for leads, or reach out directly on email, call, and WhatsApp." />
+          <SectionHeading eyebrow="Contact" title="" description="" />
           <div className="flex flex-col gap-3.5">
             <a className="block rounded-[28px] border border-slate-950/10 bg-white/75 p-[22px] shadow-soft backdrop-blur-xl" href={`mailto:${content.contact.email}`}><span className="leading-8 text-slate-500">Email</span><strong className="mt-1.5 block text-slate-950">{content.contact.email}</strong></a>
             <a className="block rounded-[28px] border border-slate-950/10 bg-white/75 p-[22px] shadow-soft backdrop-blur-xl" href={content.contact.phoneHref}><span className="leading-8 text-slate-500">Phone</span><strong className="mt-1.5 block text-slate-950">{content.contact.phoneDisplay}</strong></a>
-            <a className="block rounded-[28px] border border-slate-950/10 bg-white/75 p-[22px] shadow-soft backdrop-blur-xl" href={`https://wa.me/${content.contact.whatsappNumber}?text=${encodeURIComponent(content.contact.whatsappText)}`}><span className="leading-8 text-slate-500">WhatsApp</span><strong className="mt-1.5 block text-slate-950">Chat directly for project discussion</strong></a>
+            {/* <a className="block rounded-[28px] border border-slate-950/10 bg-white/75 p-[22px] shadow-soft backdrop-blur-xl" href={`https://wa.me/${content.contact.whatsappNumber}?text=${encodeURIComponent(content.contact.whatsappText)}`}><span className="leading-8 text-slate-500">WhatsApp</span><strong className="mt-1.5 block text-slate-950">Chat directly for project discussion</strong></a> */}
             <div className="rounded-[28px] border border-slate-950/10 bg-white/75 p-[22px] shadow-soft backdrop-blur-xl"><span className="leading-8 text-slate-500">Address</span><strong className="mt-1.5 block text-slate-950">{content.contact.officeAddress}</strong></div>
           </div>
         </Reveal>

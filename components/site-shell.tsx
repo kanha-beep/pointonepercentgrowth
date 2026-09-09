@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
+import { ChangeEvent,FormEvent, createContext, useContext, useMemo, useState, type ReactNode } from "react";
 
 import { siteContent, type SiteContent } from "@/lib/site";
 
@@ -171,10 +171,10 @@ function Footer({ content }: { content: SiteContent }) {
   return (
     <footer className="bg-[#192129] px-0 py-16 pb-10 text-white max-[720px]:py-12">
       <div className="mx-auto w-[min(1180px,calc(100%-40px))] max-[720px]:w-[min(100%-28px,1180px)]">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.9fr_0.9fr_0.9fr_0.9fr]">
+        <div className="grid gap-10 lg:grid-cols-5">
           <div className="max-w-[290px]">
-            <h3 className="m-0 text-[clamp(2.3rem,3vw,3rem)] leading-none tracking-[-0.05em] text-white">
-              pointonepercentgrowth
+            <h3 className="leading-none tracking-[-0.05em] text-white">
+              PointOnePercentGrowth
             </h3>
             <p className="mt-4 flex items-center gap-2 text-[1.05rem] font-medium text-[#f6ad93]">
               <span className="text-[1rem]">*</span>
@@ -225,8 +225,27 @@ function Footer({ content }: { content: SiteContent }) {
 }
 
 function FloatingContact() {
+  const [openChat, setOpenChat] = useState(false);
+  const [chatQuestions, setChatQuestions] = useState("");
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("form submit", chatQuestions)
+  }
   return (
     <div className="fixed bottom-3 left-3 right-3 z-40 flex flex-col items-end gap-3 sm:bottom-[18px] sm:left-auto sm:right-[18px] w-auto">
+      {openChat && (
+        <div className="h-[30rem] w-[20rem] absolute bottom-[3rem] right-0 bg-black rounded-2xl text-white">
+          <div className="h-[85%] w-full p-2">{chatQuestions}</div>
+          <form onSubmit={handleFormSubmit}>
+            <div className="flex gap-3 p-2 h-[15%] items-center">
+              <textarea placeholder="Type your question" className="w-[80%] rounded-full p-2 text-black" onChange={(e: ChangeEvent<HTMLInputElement>) => setChatQuestions(e.target.value)} />
+              <button type="submit">Ask</button>
+            </div>
+          </form>
+        </div>
+      )}
+
+
       <a
         aria-label="WhatsApp"
         className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft"
@@ -240,6 +259,12 @@ function FloatingContact() {
         href={siteContent.contact.phoneHref}
       >
         <span aria-hidden="true">📞</span>
+      </a>
+      <a
+        aria-label="Chat Now"
+        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft cursor-pointer"
+      >
+        <span aria-hidden="true" onClick={() => setOpenChat((p) => !p)}>Chatbot</span>
       </a>
     </div>
   );

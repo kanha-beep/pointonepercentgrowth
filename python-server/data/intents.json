@@ -1,0 +1,144 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey there",
+        "good morning",
+        "good evening",
+        "namaste",
+        "hello can you help me",
+        "hi mujhe help chahiye"
+      ],
+      "response": "Hello! I can help you with website packages, services, office hours, and contact details. What would you like to know?"
+    },
+    {
+      "tag": "services",
+      "patterns": [
+        "What services do you offer?",
+        "What do you do?",
+        "Do you build websites?",
+        "What types of businesses do you work with?",
+        "Can you make a website for my business?",
+        "Which business categories do you support?",
+        "aap kya services dete ho",
+        "mujhe apne business ki website banwani hai"
+      ],
+      "response": "We build websites for local businesses, including salons, grocery stores, dairy businesses, medical stores, stationery shops, cosmetics brands, and e-commerce businesses."
+    },
+    {
+      "tag": "general_pricing",
+      "patterns": [
+        "What are your website prices?",
+        "How much does a website cost?",
+        "Show me all your packages",
+        "What plans do you offer?",
+        "Compare your website packages",
+        "Tell me your general pricing",
+        "website banwane ka kitna lagega",
+        "aapke website packages kya hain"
+      ],
+      "response": "Our general packages are Launch at Rs 14,999 for up to 5 pages, Growth at Rs 34,999 for up to 10 pages, and Scale at Rs 64,999 for up to 15 pages. Category-specific packages have separate prices."
+    },
+    {
+      "tag": "launch_package",
+      "patterns": [
+        "What is included in the Launch package?",
+        "Tell me about your basic package",
+        "What does the starter website include?",
+        "What do I get for 14999?",
+        "Tell me about the five page plan",
+        "What features come with Launch?",
+        "basic package mein kya milega",
+        "launch plan ki details batao"
+      ],
+      "response": "The Launch Package costs Rs 14,999 and includes up to 5 pages, a WhatsApp button, a simple enquiry form, responsive mobile-first design, and basic speed optimization."
+    },
+    {
+      "tag": "growth_package",
+      "patterns": [
+        "What is included in the Growth package?",
+        "Tell me about your medium package",
+        "What does the ten page plan include?",
+        "What do I get for 34999?",
+        "Does the Growth plan include SEO?",
+        "Explain the Growth package features",
+        "growth package mein kya milega",
+        "medium website plan ki details batao"
+      ],
+      "response": "The Growth Package costs Rs 34,999 for up to 10 pages. It includes everything in Launch, gallery or product showcase sections, Google Maps and trust blocks, lead-focused sections, category filtering, custom calls to action, and on-page SEO structure."
+    },
+    {
+      "tag": "scale_package",
+      "patterns": [
+        "What is included in the Scale package?",
+        "Tell me about your premium package",
+        "What does the fifteen page plan include?",
+        "What do I get for 64999?",
+        "What features come with Scale?",
+        "Explain your high end website plan",
+        "premium package mein kya milega",
+        "scale plan ki details batao"
+      ],
+      "response": "The Scale Package costs Rs 64,999 for up to 15 pages. It includes everything in Growth, advanced storytelling sections, custom forms and lead routing, conversion analytics setup, speed and structure optimization, and large project or multi-category architecture."
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact you?",
+        "What is your phone number?",
+        "What is your email address?",
+        "How do I discuss my project with you?",
+        "I want to speak with your team",
+        "Can I call you?",
+        "aapse contact kaise karu",
+        "aapka phone number aur email kya hai"
+      ],
+      "response": "You can call us at +91 7999046735 or email hello@saleportfolio.in. You can also submit your project requirements through our website's Contact page."
+    },
+    {
+      "tag": "office_hours",
+      "patterns": [
+        "What are your office hours?",
+        "When are you open?",
+        "What time do you close?",
+        "Are you available on Saturday?",
+        "What are your working days?",
+        "When can I visit your office?",
+        "office kab khulta hai",
+        "aapka office timing kya hai"
+      ],
+      "response": "Our office hours are Monday to Saturday, 10:00 AM to 7:30 PM."
+    },
+    {
+      "tag": "office_location",
+      "patterns": [
+        "Where is your office?",
+        "What is your office address?",
+        "Where are you located?",
+        "Tell me your studio location",
+        "How do I find your office?",
+        "Where can I meet your team?",
+        "aapka office kaha hai",
+        "office ka address batao"
+      ],
+      "response": "Our studio office is located at Om Shiv Nagar, Lalghati."
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thank you",
+        "thanks",
+        "thanks for the help",
+        "that was helpful",
+        "thank you for the information",
+        "thanks a lot",
+        "dhanyavaad",
+        "shukriya"
+      ],
+      "response": "You're welcome! Let me know if you need help with anything else about our website services."
+    }
+  ]
+}

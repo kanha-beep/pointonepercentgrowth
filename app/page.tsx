@@ -42,7 +42,7 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto flex min-h-[560px] w-[min(1180px,calc(100%-40px))] flex-col items-center justify-center text-center max-[720px]:min-h-[480px] max-[720px]:w-[min(100%-28px,1180px)]">
           <Reveal>
-            <h1 className="mx-auto max-w-[760px] text-[clamp(3rem,6vw,5.35rem)] font-semibold leading-[0.95] tracking-[-0.065em] text-[#171c28]">
+            <h1 className="mx-auto max-w-[65rem] text-[clamp(3rem,6vw,5.35rem)] font-semibold leading-[0.95] tracking-[-0.065em] text-[#171c28] ">
               Hire top freelance talent on PointOncePercentGrowth
             </h1>
             <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">
@@ -83,8 +83,8 @@ export default function HomePage() {
           <Reveal>
             <SectionHeading
               eyebrow="Packages"
-              title="Low, medium, and high service plans with clear business value"
-              description="Each package is designed to help local businesses look stronger online and get more direct enquiries."
+              title="Low, Medium, And High Service Plans To Grow Your Business"
+              description=""
             />
           </Reveal>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
