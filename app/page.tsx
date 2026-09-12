@@ -18,8 +18,8 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative overflow-hidden px-0 pb-14 pt-12 max-[720px]:pb-10 max-[720px]:pt-8">
-        <div className="pointer-events-none absolute inset-0">
+      <section className="relative overflow-hidden px-0 pb-14 pt-12 flex justify-center items-center">
+        {/* <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-[-44px] top-[110px] grid grid-cols-5 gap-0 opacity-70 max-[900px]:left-[-56px] max-[720px]:top-[140px]">
             {gridMarks.map((_, index) => (
               <span
@@ -38,19 +38,19 @@ export default function HomePage() {
           </div>
           <div className="absolute left-1/2 top-[54%] h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#dceaff] blur-3xl max-[720px]:h-[280px] max-[720px]:w-[280px]" />
           <div className="absolute left-1/2 top-[58%] h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/85 blur-2xl max-[720px]:h-[160px] max-[720px]:w-[160px]" />
-        </div>
+        </div> */}
 
-        <div className="relative z-10 mx-auto flex min-h-[560px] flex-col items-center justify-center text-center">
+        <div className="relative z-10 mx-auto flex min-h-[560px] w-[80%] flex-col items-center justify-center text-center">
           <Reveal>
-            <div className=" h-full flex flex-col items-center">
-              <div className="w-[80%] sm:bg-red-400">
-            <h1 className=" text-[5rem] font-semibold leading-[0.95] text-[#171c28]">
-              Hire top freelance talent on PointOncePercentGrowth
-            </h1>
-            <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">
-              Discover and hire top independent talent today.
-            </p>
-             </div>
+            <div className=" h-full flex flex-col items-center bg-green-300 sm:max-w-[100%]">
+              {/* <div className=""> */}
+                <h1 className=" text-[5rem] font-semibold leading-[0.95] text-[#171c28]">
+                  Hire Top Talent on .1%Growth
+                </h1>
+                <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">
+                  Discover and hire top independent talent today.
+                </p>
+              {/* </div> */}
             </div>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3.5">
               <Link

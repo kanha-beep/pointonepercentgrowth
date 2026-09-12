@@ -9,9 +9,8 @@ export default function Reveal({ children, className = "", delay = 0 }: { childr
   useEffect(() => {
     const node = ref.current;
 
-    if (!node) {
-      return undefined;
-    }
+    if (!node) return undefined;
+    
 
     const observer = new IntersectionObserver(
       ([entry]) => {
