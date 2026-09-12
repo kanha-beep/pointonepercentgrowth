@@ -235,7 +235,7 @@ const connectedProjects = connectedCategories.flatMap((category, categoryIndex) 
 );
 
 export const siteContent: SiteContent = {
-  businessName: "pointonepercentgrowth",
+  businessName: "1%Growth",
   tagline: "",
   topLabel: "Responsive portfolio. Motion-rich sections. Category-led selling.",
   seoLine: "Designing digital storefronts that make local businesses look premium online.",
