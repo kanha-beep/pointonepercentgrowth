@@ -42,9 +42,9 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto flex min-h-[560px] w-[80%] flex-col items-center justify-center text-center">
           <Reveal>
-            <div className=" h-full flex flex-col items-center bg-green-300 sm:max-w-[100%]">
+            <div className=" h-full flex flex-col -translate-y-[2.5rem] items-center">
               {/* <div className=""> */}
-                <h1 className=" text-[5rem] font-semibold leading-[0.95] text-[#171c28]">
+                <h1 className=" text-[5rem] font-semibold leading-[1.2] text-[#171c28]">
                   Hire Top Talent on .1%Growth
                 </h1>
                 <p className="mx-auto mt-7 max-w-[620px] text-[clamp(1.1rem,2vw,1.45rem)] leading-8 text-[#5f7191]">

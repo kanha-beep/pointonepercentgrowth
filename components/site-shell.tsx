@@ -174,7 +174,7 @@ function Footer({ content }: { content: SiteContent }) {
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="max-w-[290px]">
             <h3 className="leading-none tracking-[-0.05em] text-white">
-              PointOnePercentGrowth
+              .1%Growth
             </h3>
             <p className="mt-4 flex items-center gap-2 text-[1.05rem] font-medium text-[#f6ad93]">
               <span className="text-[1rem]">*</span>
@@ -238,7 +238,7 @@ function FloatingContact() {
           <div className="h-[85%] w-full p-2">{chatQuestions}</div>
           <form onSubmit={handleFormSubmit}>
             <div className="flex gap-3 p-2 h-[15%] items-center">
-              <textarea placeholder="Type your question" className="w-[80%] rounded-full p-2 text-black" onChange={(e: ChangeEvent<HTMLInputElement>) => setChatQuestions(e.target.value)} />
+              <textarea placeholder="Type your question" className="w-[80%] rounded-full p-2 text-black" onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setChatQuestions(e.target.value)} />
               <button type="submit">Ask</button>
             </div>
           </form>
