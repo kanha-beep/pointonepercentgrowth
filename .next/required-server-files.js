@@ -105,7 +105,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\study\\Coding\\JS\\Projects_Company\\1_Sale\\apniwebsite",
+    "outputFileTracingRoot": "C:\\Users\\Asus\\.gemini\\antigravity\\scratch\\pointonepercentgrowth",
     "enablePrerenderSourceMaps": true,
     "cacheComponents": false,
     "cacheLife": {
@@ -320,13 +320,13 @@ self.__SERVER_FILES_MANIFEST={
     "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
-    "repoRoot": "D:\\study\\Coding\\JS\\Projects_Company\\1_Sale\\apniwebsite",
+    "repoRoot": "C:\\Users\\Asus\\.gemini\\antigravity\\scratch\\pointonepercentgrowth",
     "turbopack": {
-      "root": "D:\\study\\Coding\\JS\\Projects_Company\\1_Sale\\apniwebsite"
+      "root": "C:\\Users\\Asus\\.gemini\\antigravity\\scratch\\pointonepercentgrowth"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "D:\\study\\Coding\\JS\\Projects_Company\\1_Sale\\apniwebsite",
+  "appDir": "C:\\Users\\Asus\\.gemini\\antigravity\\scratch\\pointonepercentgrowth",
   "relativeAppDir": "",
   "files": [
     ".next\\package.json",

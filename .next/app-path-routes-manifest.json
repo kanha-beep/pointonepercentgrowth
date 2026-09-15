@@ -2,6 +2,7 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/about/page": "/about",
+  "/api/chatbot/route": "/api/chatbot",
   "/api/enquiries/route": "/api/enquiries",
   "/api/health/route": "/api/health",
   "/api/site-content/route": "/api/site-content",

@@ -48,6 +48,12 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/api/chatbot",
+      "regex": "^/api/chatbot(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chatbot(?:/)?$"
+    },
+    {
       "page": "/api/enquiries",
       "regex": "^/api/enquiries(?:/)?$",
       "routeKeys": {},

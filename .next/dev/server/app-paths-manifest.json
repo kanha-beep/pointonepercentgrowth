@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/api/chatbot/route": "app/api/chatbot/route.js",
+  "/page": "app/page.js",
+  "/categories/page": "app/categories/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js"
 }
