@@ -1,18 +1,84 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 import PageHero from "@/components/PageHero";
 import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
 import { siteContent } from "@/lib/site";
 
+const CATEGORIES = ["All", "Graphic", "UI/UX"] as const;
+
 export default function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const content = siteContent;
+
+  const filteredProjects = selectedCategory === "All"
+    ? content.projects
+    : content.projects.filter((p) => p.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 
   return (
     <>
-      <PageHero eyebrow="Projects" title="Project-driven portfolio pages" description="" actions={<Link className="inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-br from-[#172334] to-[#26415f] px-5 py-3 text-white shadow-soft transition duration-200 hover:-translate-y-0.5" href="/contact">Request Customization</Link>} />
-      <section className="px-0 py-10 pb-[88px] max-[720px]:pb-[72px] max-[720px]:pt-8"><div className="mx-auto w-[min(1180px,calc(100%-40px))] max-[720px]:w-[min(100%-28px,1180px)]"><Reveal><SectionHeading eyebrow="Portfolio showcase" title="Choose a project style, then we customize it for your brand" description="This structure helps customers feel the quality before they even contact you." /></Reveal><div className="grid gap-5 lg:grid-cols-2">{content.projects.map((item, index) => <Reveal key={item.id} delay={index * 70}><ProjectCard item={item} contact={content.contact} /></Reveal>)}</div></div></section>
+      <PageHero
+        eyebrow="Portfolio & Blueprints"
+        title="Production-Ready Digital Storefronts"
+        description="Choose a design blueprint tailored to your business sector. Every build includes custom mobile reordering, lightning-fast Next.js architecture, and WhatsApp checkout."
+        actions={
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3.5 text-xs font-bold text-white shadow-md transition hover:bg-gradient-to-r hover:from-indigo-600 hover:to-violet-600 active:scale-95"
+            >
+              <span>Request Custom Build</span>
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+            <a
+              href="https://wa.me/7999046735?text=Hi%2C%20I%20want%20to%20see%20portfolio%20examples"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition"
+            >
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              WhatsApp Direct
+            </a>
+          </div>
+        }
+      />
+
+      <section className="py-12 pb-24">
+        <div className="mx-auto w-[99%]">
+          {/* Interactive Filter Tabs */}
+          <Reveal>
+            <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`rounded-full px-5 py-2 text-xs font-bold transition-all duration-200 ${
+                    selectedCategory === cat
+                      ? "bg-slate-900 text-white shadow-md"
+                      : "border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Project Cards Grid */}
+          <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+            {filteredProjects.map((item, index) => (
+              <Reveal key={item.id} delay={index * 60}>
+                <ProjectCard item={item} contact={content.contact} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

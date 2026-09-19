@@ -3,7 +3,6 @@ import Link from "next/link";
 import CategoryCard from "@/components/CategoryCard";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
 import { siteContent } from "@/lib/site";
 
 export default function CategoriesPage() {
@@ -11,8 +10,50 @@ export default function CategoriesPage() {
 
   return (
     <>
-      <PageHero eyebrow="Categories" title="Explore all the categories and choose your final website destination" description="Browse by business type first, compare multiple website directions inside that category, and then ask for customization." actions={<Link className="inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-br from-[#172334] to-[#26415f] px-5 py-3 text-white shadow-soft transition duration-200 hover:-translate-y-0.5" href="/projects">See Category Projects</Link>} />
-      <section className="px-0 py-10 pb-[88px] max-[720px]:pb-[72px] max-[720px]:pt-8"><div className="mx-auto w-[min(1180px,calc(100%-40px))] max-[720px]:w-[min(100%-28px,1180px)]"><Reveal><SectionHeading eyebrow="Business categories" title="Each category below can hold multiple project cards or full websites that show clients exactly what you can build" description="" /></Reveal><div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{content.categories.map((item, index) => <Reveal key={item.slug} delay={index * 70}><CategoryCard item={item} /></Reveal>)}</div></div></section>
+      <PageHero
+        eyebrow="Industry Blueprints"
+        title="Tailored Solutions for Every Business Sector"
+        description="Browse pre-architected storefront patterns specifically optimized for local consumer behaviors, inventory dynamics, and rapid WhatsApp ordering."
+        actions={
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3.5 text-xs font-bold text-white shadow-md transition hover:bg-gradient-to-r hover:from-indigo-600 hover:to-violet-600 active:scale-95"
+            >
+              <span>Explore All Live Builds</span>
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        }
+      />
+
+      <section className="py-12 pb-28">
+        <div className="mx-auto w-[min(1240px,calc(100%-40px))]">
+          <Reveal>
+            <div className="mb-14 max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+                Industry Breakdown
+              </span>
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                Select Your Niche
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                Every sector has distinct customer journey expectations. We’ve battle-tested user flows for each category.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {content.categories.map((item, index) => (
+              <Reveal key={item.slug} delay={index * 80}>
+                <CategoryCard item={item} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

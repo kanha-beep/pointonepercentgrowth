@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChangeEvent,FormEvent, createContext, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
 
 import { siteContent, type SiteContent } from "@/lib/site";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 type StatusState = {
   type: "" | "success" | "error";
@@ -20,43 +21,37 @@ const EnquiryContext = createContext<EnquiryContextValue | null>(null);
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+  { label: "Packages", path: "/categories" },
   { label: "Projects", path: "/projects" },
-  { label: "Categories", path: "/categories" },
+  { label: "Vetting & Story", path: "/about" },
   { label: "Contact", path: "/contact" }
 ] as const;
 
 const footerGroups = [
   {
-    title: "Solutions",
+    title: "Storefront Packages",
     links: [
-      { label: "Businesses", href: "/categories" },
-      { label: "Agencies", href: "/about" },
-      { label: "Freelancers", href: "/projects" }
+      { label: "graphic & Kirana Storefronts", href: "/categories" },
+      { label: "Dairy & uiux Delivery Systems", href: "/categories" },
+      { label: "full stack & Supply Portals", href: "/categories" },
+      { label: "Custom Multi-Branch Portals", href: "/categories" }
     ]
   },
   {
-    title: "Resources",
+    title: "0.1% Vetted Talent",
     links: [
-      { label: "How it works", href: "/about" },
-      { label: "Help center", href: "/contact" },
-      { label: "Blog", href: "/projects" }
-    ]
-  },
-  {
-    title: "Developers",
-    links: [
-      { label: "Software developers", href: "/projects" },
-      { label: "WooCommerce developers", href: "/projects" },
-      { label: "Apply as an Expert", href: "/contact" }
+      { label: "Full-Stack Software Architects", href: "/projects" },
+      { label: "Tailwind & React Engineers", href: "/projects" },
+      { label: "E-Commerce Specialists", href: "/projects" },
+      { label: "Our 6-Step Vetting Protocol", href: "/about" }
     ]
   },
   {
     title: "Company",
     links: [
-      { label: "Our story", href: "/about" },
-      { label: "Our team", href: "/about" },
-      { label: "Manifesto", href: "/about" }
+      { label: "The .1% Story", href: "/about" },
+      { label: "Quality Manifesto", href: "/about" },
+      { label: "Contact & Support", href: "/contact" }
     ]
   }
 ] as const;
@@ -67,36 +62,37 @@ export function SiteShell({ children }: { children: ReactNode }) {
 
   return (
     <EnquiryContext.Provider value={value}>
-      <div className="min-h-screen">
+      <div className="flex min-h-screen flex-col bg-[#fbf8f3] text-slate-900 selection:bg-indigo-500 selection:text-white">
         <Header content={siteContent} />
         <StatusBanner />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer content={siteContent} />
+        <ChatbotWidget />
       </div>
-      <FloatingContact />
     </EnquiryContext.Provider>
   );
 }
 
 export function useEnquiryStatus() {
   const context = useContext(EnquiryContext);
-
   if (!context) {
     throw new Error("useEnquiryStatus must be used inside SiteShell.");
   }
-
   return context;
 }
 
 function StatusBanner() {
   const { status } = useEnquiryStatus();
-
-  if (!status.message) {
-    return null;
-  }
+  if (!status.message) return null;
 
   return (
-    <div className={`px-5 py-2.5 text-center text-[0.95rem] ${status.type === "success" ? "bg-emerald-700/10 text-emerald-700" : "bg-red-700/10 text-red-700"}`}>
+    <div
+      className={`px-5 py-3 text-center text-sm font-semibold tracking-wide ${
+        status.type === "success"
+          ? "bg-emerald-600 text-white shadow-sm"
+          : "bg-rose-600 text-white shadow-sm"
+      }`}
+    >
       {status.message}
     </div>
   );
@@ -104,169 +100,213 @@ function StatusBanner() {
 
 function Header({ content }: { content: SiteContent }) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
-  function closeMenu() {
-    setOpen(false);
-  }
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-950/10 bg-[#f8f3ec]/85 backdrop-blur-xl">
-      <div className="mx-auto flex w-[min(1180px,calc(100%-40px))] items-center justify-between gap-6 py-[18px] max-[720px]:w-[min(100%-28px,1180px)] max-[720px]:items-start">
-        <Link className="inline-flex items-center gap-3.5 border-0 p-0 text-left" href="/" onClick={closeMenu}>
-          <span className="inline-flex h-12 w-12 items-center justify-center rounded-[18px] border border-[#be7b3f]/25 bg-gradient-to-br from-white/95 to-[#f1dcc9]/95 font-bold text-slate-950 shadow-soft">SP</span>
-          <span>
-            <strong className="block text-[1.02rem] text-slate-950">{content.businessName}</strong>
-            <small className="block text-[0.78rem] text-slate-500">{content.tagline}</small>
-          </span>
+    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl transition-all duration-300">
+      <div className="mx-auto flex w-[min(1240px,calc(100%-40px))] items-center justify-between py-4">
+        {/* Brand Logo with animated SVG mark */}
+        <Link
+          href="/"
+          className="group flex items-center gap-3 transition hover:opacity-90"
+          onClick={() => setMobileOpen(false)}
+        >
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-tr from-slate-900 via-indigo-950 to-slate-900 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+            <svg className="h-5 w-5 text-indigo-400 transition-transform duration-300 group-hover:rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            </span>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-lg font-black tracking-tight text-slate-900 sm:text-xl">
+                .1%
+              </span>
+              <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-lg font-extrabold tracking-tight text-transparent sm:text-xl">
+                Growth
+              </span>
+            </div>
+            <p className="text-[10px] font-semibold tracking-wider uppercase text-slate-400">
+              Vetted Talent & Storefronts
+            </p>
+          </div>
         </Link>
-        <nav className="hidden items-center gap-3.5 md:flex" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <Link key={item.path} href={item.path} className={`relative text-[0.96rem] ${pathname === item.path ? "text-slate-950 after:absolute after:inset-x-0 after:-bottom-2.5 after:h-0.5 after:rounded-full after:bg-[#be7b3f] after:content-['']" : "text-slate-500 hover:text-slate-950"}`} onClick={closeMenu}>
-              {item.label}
-            </Link>
-          ))}
+
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-1 rounded-full border border-slate-200/80 bg-white/70 p-1.5 shadow-xs backdrop-blur-md md:flex">
+          {navItems.map((item) => {
+            const isActive = pathname === item.path;
+            return (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`relative rounded-full px-4 py-1.5 text-xs font-semibold transition-all duration-200 ${
+                  isActive
+                    ? "bg-slate-900 text-white shadow-sm"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
-        {/* <div className="flex items-center gap-3.5">
-          <a className="hidden min-h-12 items-center justify-center rounded-full bg-gradient-to-br from-[#172334] to-[#26415f] px-5 py-3 text-white shadow-soft transition duration-200 hover:-translate-y-0.5 md:inline-flex" href={`https://wa.me/${content.contact.whatsappNumber}?text=${encodeURIComponent(content.contact.whatsappText)}`}>
-            WhatsApp
+
+        {/* Action Buttons */}
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href={`https://wa.me/${content.contact.whatsappNumber}?text=${encodeURIComponent(content.contact.whatsappText)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-slate-200/90 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-xs transition duration-200 hover:border-emerald-300 hover:bg-emerald-50/50 hover:text-emerald-700 active:scale-98"
+          >
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            WhatsApp Now
           </a>
-          <button className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-950/10 bg-white/80 px-5 py-3 text-slate-950 transition duration-200 hover:-translate-y-0.5 md:hidden" onClick={() => setOpen((current) => !current)} type="button">
-            Menu
-          </button>
-        </div> */}
+
+          <Link
+            href="/contact"
+            className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 px-5 py-2 text-xs font-bold text-white shadow-md transition-all duration-200 hover:shadow-indigo-500/25 hover:shadow-lg active:scale-98"
+          >
+            <span>Get Started</span>
+            <svg
+              className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          type="button"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 bg-white p-2 text-slate-700 shadow-xs md:hidden"
+          aria-label="Toggle navigation menu"
+        >
+          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+            {mobileOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
-      {open ? (
-        <div className="border-t border-slate-950/10 bg-[#faf6f0]/95 md:hidden">
-          <div className="mx-auto grid w-[min(1180px,calc(100%-40px))] gap-4 py-[18px] pb-[22px] max-[720px]:w-[min(100%-28px,1180px)]">
+
+      {/* Mobile Drawer */}
+      {mobileOpen && (
+        <div className="border-b border-slate-200 bg-white/95 px-6 py-5 backdrop-blur-2xl md:hidden">
+          <nav className="flex flex-col space-y-2">
             {navItems.map((item) => (
-              <Link key={item.path} href={item.path} className={pathname === item.path ? "text-slate-950" : "text-slate-500"} onClick={closeMenu}>
+              <Link
+                key={item.path}
+                href={item.path}
+                onClick={() => setMobileOpen(false)}
+                className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
+                  pathname === item.path
+                    ? "bg-indigo-50 text-indigo-700"
+                    : "text-slate-700 hover:bg-slate-50"
+                }`}
+              >
                 {item.label}
               </Link>
             ))}
+          </nav>
+
+          <div className="mt-5 flex flex-col gap-2 pt-4 border-t border-slate-100">
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="flex w-full items-center justify-center rounded-xl bg-slate-900 py-3 text-sm font-bold text-white shadow-md"
+            >
+              Get Started
+            </Link>
+            <a
+              href={`https://wa.me/${content.contact.whatsappNumber}?text=${encodeURIComponent(content.contact.whatsappText)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white py-2.5 text-sm font-semibold text-slate-700"
+            >
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              WhatsApp Direct
+            </a>
           </div>
         </div>
-      ) : null}
+      )}
     </header>
-  );
-}
-
-function SocialIcon({ kind }: { kind: "x" | "facebook" }) {
-  if (kind === "x") {
-    return (
-      <svg aria-hidden="true" className="h-5 w-5 fill-current" viewBox="0 0 24 24">
-        <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.25l-4.9-7.43L5.54 22H2.43l7.24-8.28L1.6 2h6.4l4.43 6.9L18.9 2Zm-1.1 18h1.73L7.07 3.9H5.2Z" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg aria-hidden="true" className="h-5 w-5 fill-current" viewBox="0 0 24 24">
-      <path d="M13.5 22v-8.2h2.8l.42-3.2H13.5V8.56c0-.93.26-1.56 1.6-1.56h1.71V4.13c-.3-.04-1.33-.13-2.52-.13-2.5 0-4.21 1.53-4.21 4.34v2.42H7.25v3.2h2.88V22h3.37Z" />
-    </svg>
   );
 }
 
 function Footer({ content }: { content: SiteContent }) {
   return (
-    <footer className="bg-[#192129] px-0 py-16 pb-10 text-white max-[720px]:py-12">
-      <div className="mx-auto w-[min(1180px,calc(100%-40px))] max-[720px]:w-[min(100%-28px,1180px)]">
-        <div className="grid gap-10 lg:grid-cols-5">
-          <div className="max-w-[290px]">
-            <h3 className="leading-none tracking-[-0.05em] text-white">
-              .1%Growth
-            </h3>
-            <p className="mt-4 flex items-center gap-2 text-[1.05rem] font-medium text-[#f6ad93]">
-              <span className="text-[1rem]">*</span>
-              <span>Build with heart</span>
+    <footer className="border-t border-slate-800 bg-slate-950 text-white">
+      <div className="mx-auto w-[min(1240px,calc(100%-40px))] py-16 lg:py-20">
+        <div className="grid gap-12 lg:grid-cols-12">
+          {/* Brand Info */}
+          <div className="space-y-4 lg:col-span-4">
+            <div className="flex items-center gap-2.5">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 text-white">
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <span className="text-xl font-black tracking-tight text-white">.1% Growth</span>
+            </div>
+
+            <p className="max-w-sm text-sm leading-relaxed text-slate-400">
+              Architecting high-converting digital storefronts and providing the top 0.1% vetted engineering talent for high-growth businesses.
             </p>
-            <p className="mt-6 leading-8 text-white/68">
-              When you absolutely, positively need the highest quality Software development work.
-            </p>
-            <div className="mt-7 flex items-center gap-5 text-[#f6ad93]">
-              <a aria-label="X" className="transition hover:text-white" href="https://x.com">
-                <SocialIcon kind="x" />
-              </a>
-              <a aria-label="Facebook" className="transition hover:text-white" href="https://facebook.com">
-                <SocialIcon kind="facebook" />
-              </a>
+
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">
+              <p className="text-xs font-semibold text-slate-300">Headquarters</p>
+              <p className="mt-1 text-xs text-slate-400">{content.contact.officeAddress}</p>
+              <p className="mt-1 text-xs text-indigo-400">{content.contact.email} • {content.contact.phoneDisplay}</p>
             </div>
           </div>
 
-          {footerGroups.map((group) => (
-            <div key={group.title}>
-              <h4 className="m-0 text-[1.15rem] leading-none tracking-[-0.03em] text-white">{group.title}</h4>
-              <div className="mt-4 h-px w-full bg-white/28" />
-              <div className="mt-5 flex flex-col gap-3.5">
-                {group.links.map((link) => (
-                  <Link key={link.label} className="text-[1rem] text-white/68 transition hover:text-white" href={link.href}>
-                    {link.label}
-                  </Link>
-                ))}
+          {/* Nav Groups */}
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-8">
+            {footerGroups.map((group) => (
+              <div key={group.title} className="space-y-3">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                  {group.title}
+                </h4>
+                <ul className="space-y-2.5 p-0">
+                  {group.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-xs text-slate-400 transition hover:text-indigo-400"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-4 text-center text-[0.98rem] text-white/85 max-[720px]:mt-12">
-          <span>2026 (c) {content.businessName}</span>
-          <span className="text-[#f6ad93]">|</span>
-          <Link className="transition hover:text-white" href="/contact">
-            Terms of Service
-          </Link>
-          <span className="text-[#f6ad93]">|</span>
-          <Link className="transition hover:text-white" href="/contact">
-            Privacy Policy
-          </Link>
+        {/* Bottom copyright */}
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-800/80 pt-8 text-xs text-slate-500 sm:flex-row">
+          <p>© {new Date().getFullYear()} Point One Percent Growth. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link href="/contact" className="hover:text-slate-400 transition">Privacy Policy</Link>
+            <Link href="/contact" className="hover:text-slate-400 transition">Terms of Service</Link>
+            <Link href="/contact" className="hover:text-slate-400 transition">Security</Link>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
-function FloatingContact() {
-  const [openChat, setOpenChat] = useState(false);
-  const [chatQuestions, setChatQuestions] = useState("");
-  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("form submit", chatQuestions)
-  }
-  return (
-    <div className="fixed bottom-3 left-3 right-3 z-40 flex flex-col items-end gap-3 sm:bottom-[18px] sm:left-auto sm:right-[18px] w-auto">
-      {openChat && (
-        <div className="h-[30rem] w-[20rem] absolute bottom-[3rem] right-0 bg-black rounded-2xl text-white">
-          <div className="h-[85%] w-full p-2">{chatQuestions}</div>
-          <form onSubmit={handleFormSubmit}>
-            <div className="flex gap-3 p-2 h-[15%] items-center">
-              <textarea placeholder="Type your question" className="w-[80%] rounded-full p-2 text-black" onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setChatQuestions(e.target.value)} />
-              <button type="submit">Ask</button>
-            </div>
-          </form>
-        </div>
-      )}
-
-
-      <a
-        aria-label="WhatsApp"
-        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft"
-        href={`https://wa.me/${siteContent.contact.whatsappNumber}?text=${encodeURIComponent(siteContent.contact.whatsappText)}`}
-      >
-        <span aria-hidden="true">💬</span>
-      </a>
-      <a
-        aria-label="Call Now"
-        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft"
-        href={siteContent.contact.phoneHref}
-      >
-        <span aria-hidden="true">📞</span>
-      </a>
-      <a
-        aria-label="Chat Now"
-        className="inline-flex items-center justify-center rounded-full border border-slate-950/10 bg-white/95 p-3 shadow-soft cursor-pointer"
-      >
-        <span aria-hidden="true" onClick={() => setOpenChat((p) => !p)}>Chatbot</span>
-      </a>
-    </div>
-  );
-}
-

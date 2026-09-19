@@ -1,244 +1,194 @@
-export type ContactInfo = {
-  email: string;
-  phoneDisplay: string;
-  phoneHref: string;
-  whatsappNumber: string;
-  whatsappText: string;
-  officeLabel: string;
-  officeName: string;
-  officeAddress: string;
-  officeHours: string;
-};
-
-export type PackagePlan = {
-  tier: string;
-  name: string;
-  price: string;
-  meta?: string;
-  featured?: boolean;
-  description?: string;
-  features: string[] | string;
-  pages?: string;
-  summary?: string;
-};
-
-export type Category = {
-  slug: string;
-  name: string;
-  accent: string;
-  description: string;
-  audience: string;
-  websites: readonly string[];
-  packages?: ReadonlyArray<{
-    tier: string;
-    name: string;
-    price: string;
-    pages: string;
-    features: string;
-    summary: string;
-  }>;
-};
-
-export type Project = {
-  id: string;
-  number: string;
-  title: string;
-  category: string;
-  summary: string;
-  packageFit: string;
-  gradient: string;
-  stats: string[];
-  ctaLabel: string;
-};
-
-export type SiteContent = {
-  businessName: string;
-  tagline: string;
-  topLabel: string;
-  seoLine: string;
-  contact: ContactInfo;
-  hero: {
-    eyebrow: string;
-    title: string;
-    description: string;
-    primaryCta: string;
-    secondaryCta: string;
-  };
-  metrics: Array<{ value: string; label: string }>;
-  highlights: string[];
-  packages: PackagePlan[];
-  story: {
-    title: string;
-    description: string;
-    principles: string[];
-  };
-  office: {
-    title: string;
-    description: string;
-    bullets: string[];
-  };
-  categories: Category[];
-  projects: Project[];
-  process: Array<{
-    step: string;
-    title: string;
-    description: string;
-  }>;
-  testimonials: Array<{
-    quote: string;
-    name: string;
-  }>;
-};
-
-export type EnquiryInput = {
-  name: string;
-  businessType: string;
-  phone: string;
-  packageName: string;
-  message: string;
-};
-
+import { SiteContent } from "./typesfile";
+import portfolioImages from "@/data/portfolio-images.json";
 const connectedCategories = [
   {
-    slug: "grocery",
-    name: "Grocery",
-    accent: "accent-grocery",
+    slug: "graphic",
+    name: "graphic",
+    accent: "accent-graphic",
     description:
-      "Real package data connected for grocery businesses with starter, growth, and premium website directions.",
-    audience: "Kirana stores, fresh market stores, delivery-first grocery brands",
-    websites: ["Fresh Start Grocery", "Market Lane Grocery", "Prime Harvest Grocery"],
+      "Real package data connected for graphic businesses with starter, growth, and premium website directions.",
+    audience:
+      "Kirana stores, fresh market stores, delivery-first graphic brands",
+    websites: [
+      "Fresh Start graphic",
+      "Market Lane graphic",
+      "Prime Harvest graphic",
+    ],
     packages: [
       {
         tier: "Low",
-        name: "Fresh Start Grocery",
+        name: "Fresh Start graphic",
         price: "Rs 25,000 - Rs 35,000",
         pages: "5",
         features: "2",
         summary:
-          "Starter grocery website for neighborhood stores that need trust, quick contact, and simple product highlights."
+          "Starter graphic website for neighborhood stores that need trust, quick contact, and simple product highlights.",
       },
-      {
-        tier: "Medium",
-        name: "Market Lane Grocery",
-        price: "Rs 45,000 - Rs 70,000",
-        pages: "10",
-        features: "5",
-        summary:
-          "Growth package with offers, category storytelling, testimonials, and stronger local SEO sections."
-      },
-      {
-        tier: "High",
-        name: "Prime Harvest Grocery",
-        price: "Rs 85,000 - Rs 1,40,000",
-        pages: "15",
-        features: "7",
-        summary:
-          "Premium grocery direction for supermarket brands, corporate inquiries, and multi-branch presentation."
-      }
-    ]
+      // {
+      //   tier: "Medium",
+      //   name: "Market Lane graphic",
+      //   price: "Rs 45,000 - Rs 70,000",
+      //   pages: "10",
+      //   features: "5",
+      //   summary:
+      //     "Growth package with offers, category storytelling, testimonials, and stronger local SEO sections.",
+      // },
+      // {
+      //   tier: "High",
+      //   name: "Prime Harvest graphic",
+      //   price: "Rs 85,000 - Rs 1,40,000",
+      //   pages: "15",
+      //   features: "7",
+      //   summary:
+      //     "Premium graphic direction for supermarket brands, corporate inquiries, and multi-branch presentation.",
+      // },
+    ],
   },
   {
-    slug: "milk",
-    name: "Milk",
-    accent: "accent-milk",
+    slug: "uiux",
+    name: "uiux",
+    accent: "accent-uiux",
     description:
       "Package data for dairy businesses with lean, growth, and premium website directions.",
-    audience: "Milk shops, dairy brands, subscription delivery businesses",
-    websites: ["Shree Fresh Milk", "Morning Basket Dairy", "Urban A2 Creamery"],
+    audience: "uiux shops, dairy brands, subscription delivery businesses",
+    websites: ["Shree Fresh uiux", "Morning Basket Dairy", "Urban A2 Creamery"],
     packages: [
       {
         tier: "Low",
-        name: "Shree Fresh Milk",
+        name: "Shree Fresh uiux",
         price: "Rs 14,999",
         pages: "5",
         features: "2",
         summary:
-          "Lean dairy website focused on WhatsApp reorder flow and subscription enquiry capture for local families."
+          "Lean dairy website focused on WhatsApp reorder flow and subscription enquiry capture for local families.",
       },
-      {
-        tier: "Medium",
-        name: "Morning Basket Dairy",
-        price: "Rs 29,999",
-        pages: "10",
-        features: "5",
-        summary:
-          "Balanced dairy package with subscription plans, delivery slot enquiries, testimonials, and FAQ-led conversion."
-      },
-      {
-        tier: "High",
-        name: "Urban A2 Creamery",
-        price: "Rs 54,999",
-        pages: "15",
-        features: "7",
-        summary:
-          "Premium dairy experience with traceability, bundles, loyalty, B2B supply, and stronger brand storytelling."
-      }
-    ]
+      // {
+      //   tier: "Medium",
+      //   name: "Morning Basket Dairy",
+      //   price: "Rs 29,999",
+      //   pages: "10",
+      //   features: "5",
+      //   summary:
+      //     "Balanced dairy package with subscription plans, delivery slot enquiries, testimonials, and FAQ-led conversion.",
+      // },
+      // {
+      //   tier: "High",
+      //   name: "Urban A2 Creamery",
+      //   price: "Rs 54,999",
+      //   pages: "15",
+      //   features: "7",
+      //   summary:
+      //     "Premium dairy experience with traceability, bundles, loyalty, B2B supply, and stronger brand storytelling.",
+      // },
+    ],
   },
   {
-    slug: "stationery",
-    name: "Stationery",
-    accent: "accent-stationery",
+    slug: "full_stack",
+    name: "full_stack",
+    accent: "accent-full stack",
     description:
-      "Package variants for stationery businesses covering starter, growth, and established supplier layouts.",
-    audience: "School supply stores, office stationery shops, wholesale suppliers",
-    websites: ["Stationery Low Package", "Stationery Medium Package", "Stationery High Package"],
+      "Package variants for full stack businesses covering starter, growth, and established supplier layouts.",
+    audience:
+      "School supply stores, office full stack shops, wholesale suppliers",
+    websites: [
+      "full stack Low Package",
+      "full stack Medium Package",
+      "full stack High Package",
+    ],
     packages: [
       {
         tier: "Low",
-        name: "Stationery Low Package",
+        name: "full stack Low Package",
         price: "Rs 18,000",
         pages: "5",
         features: "2",
         summary:
-          "Starter business website for local stationery shops with contact form and WhatsApp CTA."
+          "Starter business website for local full stack shops with contact form and WhatsApp CTA.",
       },
+      // {
+      //   tier: "Medium",
+      //   name: "full stack Medium Package",
+      //   price: "Rs 42,000",
+      //   pages: "10",
+      //   features: "5",
+      //   summary:
+      //     "Growing full stack brand layout with category showcase, bulk order enquiry, testimonials, and FAQ.",
+      // },
+      // {
+      //   tier: "High",
+      //   name: "full stack High Package",
+      //   price: "Rs 78,000",
+      //   pages: "15",
+      //   features: "7",
+      //   summary:
+      //     "Advanced full stack supplier website for institutional, school, and corporate conversion flows.",
+      // },
+    ],
+  },
+  {
+    slug: "ai_ml",
+    name: "ai_ml",
+    accent: "accent-ai_ml",
+    description:
+      "Package variants for full stack businesses covering starter, growth, and established supplier layouts.",
+    audience:
+      "School supply stores, office full stack shops, wholesale suppliers",
+    websites: [
+      "full stack Low Package",
+      "full stack Medium Package",
+      "full stack High Package",
+    ],
+    packages: [
       {
-        tier: "Medium",
-        name: "Stationery Medium Package",
-        price: "Rs 42,000",
-        pages: "10",
-        features: "5",
+        tier: "Low",
+        name: "ai_ml Low Package",
+        price: "Rs 18,000",
+        pages: "5",
+        features: "2",
         summary:
-          "Growing stationery brand layout with category showcase, bulk order enquiry, testimonials, and FAQ."
+          "Starter business website for local full stack shops with contact form and WhatsApp CTA.",
       },
-      {
-        tier: "High",
-        name: "Stationery High Package",
-        price: "Rs 78,000",
-        pages: "15",
-        features: "7",
-        summary:
-          "Advanced stationery supplier website for institutional, school, and corporate conversion flows."
-      }
-    ]
-  }
+      // {
+      //   tier: "Medium",
+      //   name: "ai_ml Medium Package",
+      //   price: "Rs 42,000",
+      //   pages: "10",
+      //   features: "5",
+      //   summary:
+      //     "Growing full stack brand layout with category showcase, bulk order enquiry, testimonials, and FAQ.",
+      // },
+      // {
+      //   tier: "High",
+      //   name: "ai_ml High Package",
+      //   price: "Rs 78,000",
+      //   pages: "15",
+      //   features: "7",
+      //   summary:
+      //     "Advanced full stack supplier website for institutional, school, and corporate conversion flows.",
+      // },
+    ],
+  },
 ] as const;
 
-const connectedProjects = connectedCategories.flatMap((category, categoryIndex) =>
-  category.packages.map((pkg, packageIndex) => ({
-    id: `${category.slug}-${pkg.tier.toLowerCase()}`,
-    number: String(categoryIndex * 3 + packageIndex + 1).padStart(2, "0"),
-    title: pkg.name,
-    category: `${category.name} (${pkg.tier})`,
-    summary: pkg.summary,
-    packageFit: pkg.tier,
-    gradient:
-      category.slug === "grocery"
-        ? "gradient-grocery"
-        : category.slug === "milk"
-          ? "gradient-milk"
-          : "gradient-stationery",
-    stats: [`${pkg.pages} pages`, `${pkg.features} features`, pkg.price],
-    ctaLabel: `Use ${pkg.name}`
-  }))
-);
-
+const connectedProjects = portfolioImages.map((image, index) => ({
+  id: image.id,
+  number: String(index + 1).padStart(2, "0"),
+  title: image.title,
+  category: image.developer === "Lavanya" ? "Graphic" : "UI/UX",
+  developer: image.developer,
+  summary: `Portfolio work created by ${image.developer}.`,
+  packageFit: "Portfolio",
+  gradient: image.developer === "graphic" ? "gradient-graphic" : "gradient-uiux",
+  stats: [],
+  ctaLabel: "View project",
+  imageUrl: image.imageUrl,
+}));
 export const siteContent: SiteContent = {
-  businessName: "1%Growth",
+  businessName: ".1%Growth",
   tagline: "",
   topLabel: "Responsive portfolio. Motion-rich sections. Category-led selling.",
-  seoLine: "Designing digital storefronts that make local businesses look premium online.",
+  seoLine:
+    "Designing digital storefronts that make local businesses look premium online.",
   contact: {
     email: "pointonepercentgrowth@gmail.com",
     phoneDisplay: "+91 7999046735",
@@ -249,27 +199,27 @@ export const siteContent: SiteContent = {
     officeLabel: "Studio office",
     officeName: "PointOnePercentGrowth",
     officeAddress: "Lalghati",
-    officeHours: "Mon to Sat, 10:00 AM to 7:30 PM"
+    officeHours: "Mon to Sat, 10:00 AM to 7:30 PM",
   },
   hero: {
     eyebrow: "",
     title:
-      "We build polished websites that make salons, grocery stores, milk brands, stationery shops, clinics, cosmetics brands, and local shops look ready for serious business.",
+      "We build polished websites that make graphics, graphic stores, uiux brands, full stack shops, clinics, cosmetics brands, and local shops look ready for serious business.",
     description:
       "This main portfolio website helps clients browse our work by category, compare low, medium, and high service plans, and contact us directly on WhatsApp or phone for customization.",
     primaryCta: "Explore Projects",
-    secondaryCta: "See Packages"
+    secondaryCta: "See Packages",
   },
   metrics: [
     { value: "07", label: "business categories" },
     { value: "09", label: "connected package directions" },
     { value: "03", label: "service packages" },
-    { value: "100%", label: "mobile responsive layouts" }
+    { value: "100%", label: "mobile responsive layouts" },
   ],
   highlights: [
     "Dedicated pages for About, Projects, Categories, and Contact",
     "Motion-based reveals, floating shapes, and premium section layering",
-    "Direct WhatsApp and mobile call actions on every project card"
+    "Direct WhatsApp and mobile call actions on every project card",
   ],
   packages: [
     {
@@ -284,8 +234,8 @@ export const siteContent: SiteContent = {
         "Direct WhatsApp button",
         "Simple enquiry form",
         "Responsive mobile-first design",
-        "Basic speed optimization"
-      ]
+        "Basic speed optimization",
+      ],
     },
     {
       tier: "Medium",
@@ -293,15 +243,16 @@ export const siteContent: SiteContent = {
       price: "Rs 34,999",
       meta: "Up to 10 pages",
       featured: true,
-      description: "For businesses that want category showcases and stronger conversion.",
+      description:
+        "For businesses that want category showcases and stronger conversion.",
       features: [
         "Everything in Launch Package",
         "Gallery or product showcase sections",
         "Google Maps and trust blocks",
         "Lead-focused landing sections",
         "Category filtering and custom CTAs",
-        "On-page SEO structure"
-      ]
+        "On-page SEO structure",
+      ],
     },
     {
       tier: "High",
@@ -309,16 +260,17 @@ export const siteContent: SiteContent = {
       price: "Rs 64,999",
       meta: "Up to 15 pages",
       featured: false,
-      description: "For premium local brands moving toward full e-commerce positioning.",
+      description:
+        "For premium local brands moving toward full e-commerce positioning.",
       features: [
         "Everything in Growth Package",
         "Advanced multi-section storytelling",
         "Custom forms and lead routing",
         "Conversion analytics setup",
         "Speed and structure optimization",
-        "Large project or multi-category architecture"
-      ]
-    }
+        "Large project or multi-category architecture",
+      ],
+    },
   ],
   story: {
     title: "Who we are",
@@ -327,8 +279,8 @@ export const siteContent: SiteContent = {
     principles: [
       "Professional visual system that builds trust fast",
       "Practical layouts that help customers call or message immediately",
-      "Category-first presentations so local clients know exactly what they are buying"
-    ]
+      "Category-first presentations so local clients know exactly what they are buying",
+    ],
   },
   office: {
     title: "Our office and working style",
@@ -336,39 +288,47 @@ export const siteContent: SiteContent = {
       "We blend agency-level visual polish with local business practicality. Every project is designed to feel premium on mobile, clean on desktop, and easy for real customers to act on.",
     bullets: [
       "Clear process from category selection to launch",
-      "Custom branding for salon, grocery, stationery, medical, cosmetics, e-commerce, and milk businesses",
-      "Direct support through WhatsApp and voice call"
-    ]
+      "Custom branding for graphic, graphic, full stack, medical, cosmetics, e-commerce, and uiux businesses",
+      "Direct support through WhatsApp and voice call",
+    ],
   },
   categories: [
     {
-      slug: "salon",
-      name: "Salon",
-      accent: "accent-salon",
+      slug: "graphic",
+      name: "Graphic",
+      accent: "accent-graphic",
       description:
         "Luxury service presentation, pricing blocks, appointment messaging, stylist sections, and beauty-led visuals.",
-      audience: "Salons, spas, grooming, makeover studios",
-      websites: ["Fusion Unisex Salon", "Lucky Family Salon", "Urban Glow Studio"]
+      audience: "graphics, spas, grooming, makeover studios",
+      websites: [
+        "Fusion Unisex graphic",
+        "Lucky Family graphic",
+        "Urban Glow Studio",
+      ],
     },
     {
-      slug: "grocery",
-      name: "Grocery",
-      accent: "accent-grocery",
+      slug: "asdcfvb",
+      name: "qwsdfvfdsdcv",
+      accent: "accent-graphic",
       description:
-        "Connected package directions for grocery businesses with starter, growth, and premium website variants.",
+        "Connected package directions for graphic businesses with starter, growth, and premium website variants.",
       audience: "Kirana stores, quick commerce brands, fresh market stores",
-      websites: connectedCategories.find((item) => item.slug === "grocery")!.websites,
-      packages: connectedCategories.find((item) => item.slug === "grocery")!.packages
+      websites: connectedCategories.find((item) => item.slug === "graphic")!
+        .websites,
+      packages: connectedCategories.find((item) => item.slug === "graphic")!
+        .packages,
     },
     {
-      slug: "milk",
-      name: "Milk",
-      accent: "accent-milk",
+      slug: "uiux",
+      name: "uiux",
+      accent: "accent-uiux",
       description:
-        "Subscription-friendly, trust-led website directions for local dairies and premium milk brands.",
-      audience: "Local dairies, milk subscriptions, premium dairy brands",
-      websites: connectedCategories.find((item) => item.slug === "milk")!.websites,
-      packages: connectedCategories.find((item) => item.slug === "milk")!.packages
+        "Subscription-friendly, trust-led website directions for local dairies and premium uiux brands.",
+      audience: "Local dairies, uiux subscriptions, premium dairy brands",
+      websites: connectedCategories.find((item) => item.slug === "uiux")!
+        .websites,
+      packages: connectedCategories.find((item) => item.slug === "uiux")!
+        .packages,
     },
     {
       slug: "medical",
@@ -377,17 +337,23 @@ export const siteContent: SiteContent = {
       description:
         "Trust-focused pages for medicines, diagnostic information, working hours, and nearby contact.",
       audience: "Pharmacies, clinics, wellness stores",
-      websites: ["CarePlus Medical", "City Medico Hub", "Health Direct Pharmacy"]
+      websites: [
+        "CarePlus Medical",
+        "City Medico Hub",
+        "Health Direct Pharmacy",
+      ],
     },
     {
-      slug: "stationery",
-      name: "Stationery",
-      accent: "accent-stationery",
+      slug: "full stack",
+      name: "full stack",
+      accent: "accent-full stack",
       description:
-        "Connected package layouts for shop, school, office, and wholesale stationery selling.",
-      audience: "Local stationery shops, office suppliers",
-      websites: connectedCategories.find((item) => item.slug === "stationery")!.websites,
-      packages: connectedCategories.find((item) => item.slug === "stationery")!.packages
+        "Connected package layouts for shop, school, office, and wholesale full stack selling.",
+      audience: "Local full stack shops, office suppliers",
+      websites: connectedCategories.find((item) => item.slug === "full_stack")!
+        .websites,
+      packages: connectedCategories.find((item) => item.slug === "full_stack")!
+        .packages,
     },
     {
       slug: "cosmetics",
@@ -396,7 +362,11 @@ export const siteContent: SiteContent = {
       description:
         "Product-led storytelling with clean grids, premium visuals, and beauty brand positioning.",
       audience: "Makeup brands, beauty stores, skincare boutiques",
-      websites: ["Velvet Glow Cosmetics", "Blush & Bloom", "Radiant Beauty House"]
+      websites: [
+        "Velvet Glow Cosmetics",
+        "Blush & Bloom",
+        "Radiant Beauty House",
+      ],
     },
     {
       slug: "ecommerce",
@@ -405,47 +375,55 @@ export const siteContent: SiteContent = {
       description:
         "Sales-first product experiences for local businesses moving online with stronger digital credibility.",
       audience: "Any local business ready to sell online",
-      websites: ["Local Cart Pro", "Neighborhood Storefront", "ScaleUp Commerce"]
-    }
+      websites: [
+        "Local Cart Pro",
+        "Neighborhood Storefront",
+        "ScaleUp Commerce",
+      ],
+    },
   ],
   projects: connectedProjects,
   process: [
     {
       step: "01",
       title: "Choose category",
-      description: "Salon, grocery, milk, medical, stationery, cosmetics, or e-commerce."
+      description:
+        "graphic, graphic, uiux, medical, full stack, cosmetics, or e-commerce.",
     },
     {
       step: "02",
       title: "Shortlist a project",
-      description: "Pick the project direction that matches your business personality."
+      description:
+        "Pick the project direction that matches your business personality.",
     },
     {
       step: "03",
       title: "Select low, medium, or high",
-      description: "We map your pages, features, and conversion flow to the right package."
+      description:
+        "We map your pages, features, and conversion flow to the right package.",
     },
     {
       step: "04",
       title: "Customize and launch",
-      description: "Your branding, content, direct contact links, and local positioning go live."
-    }
+      description:
+        "Your branding, content, direct contact links, and local positioning go live.",
+    },
   ],
   testimonials: [
     {
       quote:
         "The website immediately looked more expensive than what local competitors had. Clients trusted us faster.",
-      name: "Salon Business Owner"
+      name: "graphic Business Owner",
     },
     {
       quote:
         "The category-based portfolio made it easy to pick a direction. We knew what we were buying before we called.",
-      name: "Grocery Store Founder"
+      name: "graphic Store Founder",
     },
     {
       quote:
         "Mobile responsiveness and clear WhatsApp buttons made the biggest difference for our local leads.",
-      name: "Medical Store Manager"
-    }
-  ]
+      name: "Medical Store Manager",
+    },
+  ],
 };

@@ -1,20 +1,62 @@
 import type { ReactNode } from "react";
-
 import Reveal from "@/components/Reveal";
 
-export default function PageHero({ eyebrow, title, description, actions, stats }: { eyebrow: string; title: string; description: string; actions?: ReactNode; stats?: ReactNode }) {
+export default function PageHero({
+  eyebrow,
+  title,
+  description,
+  actions,
+  stats
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  actions?: ReactNode;
+  stats?: ReactNode;
+}) {
   return (
-    <section className="relative overflow-hidden px-0 pb-10 pt-[72px] max-[720px]:pt-[54px]">
-      <div className="absolute right-[8%] top-9 h-60 w-60 animate-float rounded-full bg-[#be7b3f]/10 blur-md" />
-      <div className="absolute bottom-0 left-[-40px] h-44 w-44 animate-float-reverse rounded-full bg-[#26415f]/10 blur-md" />
-      <div className="relative z-10 mx-auto grid w-[min(1180px,calc(100%-40px))] items-start gap-7 lg:grid-cols-[1.05fr_0.95fr] max-[720px]:w-[min(100%-28px,1180px)]">
-        <Reveal>
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#be7b3f]">{eyebrow}</p>
-          <h1 className="m-0 text-[clamp(2.4rem,5vw,5rem)] leading-[0.98] tracking-[-0.05em] text-slate-950">{title}</h1>
-          <p className="mt-5 max-w-[62ch] text-[1.04rem] leading-8 text-slate-500">{description}</p>
-          {actions ? <div className="mt-7 flex flex-wrap items-center gap-3.5">{actions}</div> : null}
-        </Reveal>
-        {stats ? <Reveal delay={120}>{stats}</Reveal> : null}
+    <section className="relative overflow-hidden py-16 lg:py-24">
+      {/* Background Animated Gradient Mesh */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -left-20 -top-20 h-80 w-80 animate-blob rounded-full bg-indigo-400/15 blur-3xl" />
+        <div className="absolute right-0 top-10 h-72 w-72 animate-blob rounded-full bg-violet-400/15 blur-3xl [animation-delay:3s]" />
+      </div>
+
+      <div className="relative mx-auto w-[min(1240px,calc(100%-40px))]">
+        <div className="grid items-center gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <Reveal variant="left">
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-slate-700 shadow-xs">
+                <span className="h-2 w-2 rounded-full bg-indigo-500" />
+                {eyebrow}
+              </span>
+
+              <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl sm:leading-[1.12] lg:text-6xl">
+                {title}
+              </h1>
+
+              {description && (
+                <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+                  {description}
+                </p>
+              )}
+
+              {actions && (
+                <div className="mt-8 flex flex-wrap items-center gap-3.5">
+                  {actions}
+                </div>
+              )}
+            </Reveal>
+          </div>
+
+          {stats && (
+            <div className="lg:col-span-5">
+              <Reveal variant="right" delay={120}>
+                {stats}
+              </Reveal>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
