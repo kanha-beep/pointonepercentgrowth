@@ -1,4 +1,7 @@
 import React from "react";
+import Link from "next/link";
+
+import Reveal from "@/components/Reveal";
 
 export default function Hire() {
   return <div>
