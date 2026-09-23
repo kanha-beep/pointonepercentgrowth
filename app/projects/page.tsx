@@ -21,16 +21,16 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Portfolio & Blueprints"
-        title="Production-Ready Digital Storefronts"
-        description="Choose a design blueprint tailored to your business sector. Every build includes custom mobile reordering, lightning-fast Next.js architecture, and WhatsApp checkout."
+        eyebrow="Our Portfolio"
+        title="Graphic Design & UI/UX"
+        description="Explore the work created by our team. Filter by Graphic or UI/UX to find the designs you want to see."
         actions={
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3.5 text-xs font-bold text-white shadow-md transition hover:bg-gradient-to-r hover:from-indigo-600 hover:to-violet-600 active:scale-95"
             >
-              <span>Request Custom Build</span>
+              <span>Discuss your project</span>
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

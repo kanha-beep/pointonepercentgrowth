@@ -10,7 +10,6 @@ const initialForm: EnquiryInput = {
   name: "",
   businessType: "",
   phone: "",
-  packageName: "",
   message: ""
 };
 
@@ -72,7 +71,7 @@ export default function ContactSection({ content }: { content: SiteContent }) {
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Have a project in mind or need a tailored package quote? Reach out directly via form or message our founding team on WhatsApp.
+              Have a design project in mind? Reach out directly via form or message our founding team on WhatsApp.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -182,7 +181,7 @@ export default function ContactSection({ content }: { content: SiteContent }) {
                       required
                       value={formData.businessType}
                       onChange={handleChange}
-                      placeholder="graphic, Dairy, Retail, Tech..."
+                      placeholder="Your brand or organisation"
                       className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-500/20"
                     />
                   </div>
@@ -204,27 +203,6 @@ export default function ContactSection({ content }: { content: SiteContent }) {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                      Interested Package
-                    </label>
-                    <select
-                      name="packageName"
-                      required
-                      value={formData.packageName}
-                      onChange={handleChange}
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-500/20"
-                    >
-                      <option value="">Select a package or service</option>
-                      {content.packages.map((item) => (
-                        <option key={item.name} value={item.name}>
-                          {item.name} ({item.tier} - {item.price})
-                        </option>
-                      ))}
-                      <option value="Custom Developer Hiring">Hire 0.1% Vetted Developer</option>
-                      <option value="Other / Custom Enterprise">Other / Custom Enterprise Build</option>
-                    </select>
-                  </div>
                 </div>
 
                 <div>
@@ -237,7 +215,7 @@ export default function ContactSection({ content }: { content: SiteContent }) {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Describe your current store, custom features you need (e.g. WhatsApp checkout, delivery zones), or timeline expectations."
+                    placeholder="Tell us about your design idea, requirements, and timeline."
                     className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-500/20"
                   />
                 </div>

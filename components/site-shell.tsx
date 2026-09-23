@@ -21,39 +21,20 @@ const EnquiryContext = createContext<EnquiryContextValue | null>(null);
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "Packages", path: "/categories" },
   { label: "Projects", path: "/projects" },
-  { label: "Vetting & Story", path: "/about" },
+  { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" }
 ] as const;
 
 const footerGroups = [
-  {
-    title: "Storefront Packages",
-    links: [
-      { label: "graphic & Kirana Storefronts", href: "/categories" },
-      { label: "Dairy & uiux Delivery Systems", href: "/categories" },
-      { label: "full stack & Supply Portals", href: "/categories" },
-      { label: "Custom Multi-Branch Portals", href: "/categories" }
-    ]
-  },
-  {
-    title: "0.1% Vetted Talent",
-    links: [
-      { label: "Full-Stack Software Architects", href: "/projects" },
-      { label: "Tailwind & React Engineers", href: "/projects" },
-      { label: "E-Commerce Specialists", href: "/projects" },
-      { label: "Our 6-Step Vetting Protocol", href: "/about" }
-    ]
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "The .1% Story", href: "/about" },
-      { label: "Quality Manifesto", href: "/about" },
-      { label: "Contact & Support", href: "/contact" }
-    ]
-  }
+  { title: "Our work", links: [
+    { label: "Graphic Design", href: "/projects" },
+    { label: "UI/UX Design", href: "/projects" }
+  ] },
+  { title: "Studio", links: [
+    { label: "About us", href: "/about" },
+    { label: "Contact us", href: "/contact" }
+  ] }
 ] as const;
 
 export function SiteShell({ children }: { children: ReactNode }) {
@@ -131,7 +112,7 @@ function Header({ content }: { content: SiteContent }) {
               </span>
             </div>
             <p className="text-[10px] font-semibold tracking-wider uppercase text-slate-400">
-              Vetted Talent & Storefronts
+              Graphic Design & UI/UX
             </p>
           </div>
         </Link>
@@ -263,7 +244,7 @@ function Footer({ content }: { content: SiteContent }) {
             </div>
 
             <p className="max-w-sm text-sm leading-relaxed text-slate-400">
-              Architecting high-converting digital storefronts and providing the top 0.1% vetted engineering talent for high-growth businesses.
+              Graphic design and UI/UX for brands and digital products. Explore our work and get in touch to discuss your project.
             </p>
 
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4">

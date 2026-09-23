@@ -5,7 +5,6 @@ import FreelancerSliderSection from "@/components/FreelancerSliderSection";
 import HiringProcessSection from "@/components/HiringProcessSection";
 import MatchDeveloperSection from "@/components/MatchDeveloperSection";
 import OfficeShowcase from "@/components/OfficeShowcase";
-import PackageCard from "@/components/PackageCard";
 import Reveal from "@/components/Reveal";
 import { siteContent } from "@/lib/site";
 
@@ -125,7 +124,7 @@ export default function HomePage() {
           <span>•</span>
           <span>🚀 95+ Lighthouse Performance Guarantee</span>
           <span>•</span>
-          <span>⚡ graphic • Dairy • full stack • Tech Storefronts</span>
+          <span>⚡ Graphic Design • UI/UX • Creative Work</span>
           <span>•</span>
           <span>⭐ {content.contact.officeName}</span>
           <span>•</span>
@@ -162,16 +161,16 @@ export default function HomePage() {
                     💬
                   </div>
                   <h3 className="mt-6 text-2xl font-black tracking-tight text-slate-900">
-                    WhatsApp-Integrated Digital Storefronts
+                    Graphic Design & UI/UX
                   </h3>
                   <p className="mt-3 text-sm font-medium leading-relaxed text-slate-600">
-                    Indian consumers love simplicity. With one click, items from their cart are formatted into an instant bill and sent straight to your WhatsApp business line.
+                    Explore our graphic design and UI/UX work, then share your project ideas with our team.
                   </p>
 
                   <div className="mt-6 flex flex-wrap gap-2">
-                    <span className="rounded-xl border-2 border-slate-900 bg-emerald-100 px-3 py-1 text-xs font-black text-slate-900">Direct Reorder Flow</span>
-                    <span className="rounded-xl border-2 border-slate-900 bg-amber-100 px-3 py-1 text-xs font-black text-slate-900">Zero App Installation</span>
-                    <span className="rounded-xl border-2 border-slate-900 bg-indigo-100 px-3 py-1 text-xs font-black text-slate-900">Instant Customer Capture</span>
+                    <span className="rounded-xl border-2 border-slate-900 bg-emerald-100 px-3 py-1 text-xs font-black text-slate-900">Graphic Design</span>
+                    <span className="rounded-xl border-2 border-slate-900 bg-amber-100 px-3 py-1 text-xs font-black text-slate-900">UI/UX Design</span>
+                    <span className="rounded-xl border-2 border-slate-900 bg-indigo-100 px-3 py-1 text-xs font-black text-slate-900">Creative Collaboration</span>
                   </div>
                 </div>
               </Reveal>
@@ -219,7 +218,7 @@ export default function HomePage() {
                     💰
                   </div>
                   <h3 className="mt-6 text-2xl font-black tracking-tight text-slate-900">
-                    Predictable, Honest Package Pricing
+                    Designs Built Around Your Ideas
                   </h3>
                   <p className="mt-3 text-sm font-medium leading-relaxed text-slate-600">
                     No recurring platform royalties or hidden surprises. You get complete source code ownership and full launch support.
@@ -227,10 +226,10 @@ export default function HomePage() {
 
                   <div className="mt-6">
                     <Link
-                      href="/categories"
+                      href="/projects"
                       className="inline-flex items-center gap-2 text-xs font-black uppercase text-indigo-600 hover:text-indigo-800"
                     >
-                      <span>Explore Industry Package Specs</span>
+                      <span>Explore Our Work</span>
                       <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
@@ -239,34 +238,6 @@ export default function HomePage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PACKAGES PRICING SECTION */}
-      <section className="relative py-20 lg:py-28">
-        <div className="mx-auto w-[min(1240px,calc(100%-40px))]">
-          <Reveal>
-            <div className="mx-auto mb-16 max-w-2xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border-2 border-slate-900 bg-amber-300 px-4 py-1 text-xs font-black uppercase tracking-wider text-slate-900 shadow-[3px_3px_0px_0px_#0f172a]">
-                <span>💎</span>
-                <span>Transparent Packages</span>
-              </span>
-              <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-                Low, Medium & High Service Plans
-              </h2>
-              <p className="mt-4 text-base font-medium text-slate-600 sm:text-lg">
-                Choose the package tier engineered specifically for your business scale.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {content.packages.map((item, index) => (
-              <Reveal key={item.name} delay={index * 80}>
-                <PackageCard item={item} contact={content.contact} />
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>

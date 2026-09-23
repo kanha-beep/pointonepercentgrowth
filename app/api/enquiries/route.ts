@@ -19,9 +19,9 @@ async function ensureStorage() {
 }
 
 export async function POST(request: Request) {
-  const { name, businessType, phone, packageName, message } = (await request.json()) as Partial<EnquiryInput>;
+  const { name, businessType, phone, message } = (await request.json()) as Partial<EnquiryInput>;
 
-  if (!name || !businessType || !phone || !packageName || !message) {
+  if (!name || !businessType || !phone || !message) {
     return NextResponse.json({ message: "Please fill in all required fields." }, { status: 400 });
   }
 
@@ -36,7 +36,6 @@ export async function POST(request: Request) {
       name,
       businessType,
       phone,
-      packageName,
       message
     });
 

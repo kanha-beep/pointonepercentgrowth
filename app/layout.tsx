@@ -5,18 +5,10 @@ import { SiteShell } from "@/components/site-shell";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: ".1% Growth | Top 0.1% Vetted Talent & High-Converting Digital Storefronts",
+  title: ".1% Growth | Graphic Design & UI/UX",
   description:
-    "Discover battle-tested 0.1% software engineers and premium digital storefront packages engineered to accelerate local and digital businesses.",
-  keywords: [
-    "0.1% Growth",
-    "vetted software engineers",
-    "digital storefront",
-    "graphic website package",
-    "uiux dairy subscription website",
-    "full stack business website",
-    "Next.js web development"
-  ]
+    "Explore our graphic design and UI/UX portfolio. Contact .1% Growth to discuss your next design project.",
+  keywords: ["graphic design", "UI/UX design", "design portfolio", ".1% Growth"]
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

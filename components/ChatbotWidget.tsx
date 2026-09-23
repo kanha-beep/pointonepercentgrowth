@@ -13,11 +13,10 @@ type Message = {
 };
 
 const SUGGESTED_CHIPS = [
-  { label: "📦 Website Packages", query: "What packages do you offer?" },
-  { label: "💰 Pricing Tiers", query: "How much do packages cost?" },
-  { label: "⚡ 0.1% Vetting", query: "How do you vet developers?" },
-  { label: "🥛 Dairy / graphic", query: "Can you build a graphic or uiux website?" },
-  { label: "📍 Studio Office", query: "Where is your office located?" }
+  { label: "Graphic Design", query: "Tell me about graphic design" },
+  { label: "UI/UX", query: "Tell me about UI/UX design" },
+  { label: "Portfolio", query: "Where can I see your work?" },
+  { label: "Contact", query: "How can I contact you?" }
 ];
 
 export default function ChatbotWidget() {
@@ -26,9 +25,9 @@ export default function ChatbotWidget() {
     {
       id: "welcome",
       sender: "bot",
-      text: "Hey there! 👾 Welcome to .1% Growth Creative Studio. Ask me anything about our digital storefront packages or elite 0.1% vetted developers!",
+      text: "Hi! Welcome to .1% Growth. Ask about our graphic design, UI/UX work, or how to contact us.",
       timestamp: "Just now",
-      source: "python-ml"
+      source: "studio"
     }
   ]);
   const [input, setInput] = useState("");
@@ -76,7 +75,7 @@ export default function ChatbotWidget() {
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         intent: data.intent,
         confidence: data.confidence,
-        source: data.source || "python-ml"
+        source: data.source || "studio"
       };
 
       setMessages((prev) => [...prev, botMsg]);
@@ -86,7 +85,7 @@ export default function ChatbotWidget() {
         {
           id: String(Date.now() + 1),
           sender: "bot",
-          text: "We can craft custom packages tailored to your needs. Connect with our founders on WhatsApp (+91 7999046735) for instant answers!",
+          text: "Tell us about your design project on WhatsApp (+91 7999046735).",
           timestamp: "Now",
           source: "fallback"
         }
@@ -116,12 +115,12 @@ export default function ChatbotWidget() {
                 <div className="flex items-center gap-2">
                   <h4 className="font-black text-sm tracking-tight text-white">Growth Bot 3000</h4>
                   <span className="rounded-md border border-amber-300 bg-amber-400/30 px-1.5 py-0.2 text-[9px] font-extrabold uppercase text-amber-200">
-                    Python NLP
+                    Studio
                   </span>
                 </div>
                 <p className="flex items-center gap-1.5 text-[11px] font-medium text-indigo-100">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                  Live AI • 0.1% Storefront Engine
+                  Graphic Design & UI/UX
                 </p>
               </div>
             </div>
@@ -205,7 +204,7 @@ export default function ChatbotWidget() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask anything (packages, pricing, vetting)..."
+              placeholder="Ask about our work or contact details..."
               className="flex-1 rounded-xl border-2 border-slate-900 bg-slate-50 px-4 py-2 text-xs font-semibold text-slate-800 placeholder-slate-400 outline-none transition focus:bg-white focus:ring-2 focus:ring-indigo-500"
             />
             <button

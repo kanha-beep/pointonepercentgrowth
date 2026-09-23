@@ -3,7 +3,6 @@ import type { ContactInfo, Project } from "@/lib/typesfile";
 const gradientClasses: Record<string, string> = {
   "gradient-graphic": "bg-gradient-to-br from-rose-50 via-white to-amber-50",
   "gradient-graphic-soft": "bg-gradient-to-br from-amber-50/50 via-white to-orange-50",
-  "gradient-graphic": "bg-gradient-to-br from-emerald-50 via-teal-50/40 to-lime-50",
   "gradient-medical": "bg-gradient-to-br from-sky-50 via-blue-50/40 to-indigo-50",
   "gradient-uiux": "bg-gradient-to-br from-blue-50 via-indigo-50/40 to-cyan-50",
   "gradient-full stack": "bg-gradient-to-br from-violet-50 via-purple-50/40 to-pink-50",

@@ -50,7 +50,7 @@ export default function AboutPage() {
                 We Make Growing Businesses Look Unstoppable
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                A great storefront is not an artistic indulgence—it is a conversion engine. We obsess over readability, instant trust signals, and zero-friction purchase flows.
+                We focus on clear visuals, useful layouts, and a collaborative design process.
               </p>
             </Reveal>
           </div>

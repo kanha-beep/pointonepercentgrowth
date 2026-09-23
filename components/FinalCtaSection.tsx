@@ -37,8 +37,8 @@ export default function FinalCtaSection() {
               </h2>
 
               <p className="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
-                Whether you need an instant digital storefront for your graphic, dairy, or local shop, or a senior 0.1% developer for enterprise builds, we deliver within days.
-              </p>
+                Tell us about your graphic design or UI/UX project. We will help you plan the next steps.
+</p>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <Link
