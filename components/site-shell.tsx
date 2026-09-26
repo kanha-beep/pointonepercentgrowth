@@ -27,14 +27,18 @@ const navItems = [
 ] as const;
 
 const footerGroups = [
-  { title: "Our work", links: [
-    { label: "Graphic Design", href: "/projects" },
-    { label: "UI/UX Design", href: "/projects" }
-  ] },
-  { title: "Studio", links: [
-    { label: "About us", href: "/about" },
-    { label: "Contact us", href: "/contact" }
-  ] }
+  {
+    title: "Our work", links: [
+      { label: "Graphic Design", href: "/projects" },
+      { label: "UI/UX Design", href: "/projects" }
+    ]
+  },
+  {
+    title: "Studio", links: [
+      { label: "About us", href: "/about" },
+      { label: "Contact us", href: "/contact" }
+    ]
+  }
 ] as const;
 
 export function SiteShell({ children }: { children: ReactNode }) {
@@ -68,11 +72,10 @@ function StatusBanner() {
 
   return (
     <div
-      className={`px-5 py-3 text-center text-sm font-semibold tracking-wide ${
-        status.type === "success"
-          ? "bg-emerald-600 text-white shadow-sm"
-          : "bg-rose-600 text-white shadow-sm"
-      }`}
+      className={`px-5 py-3 text-center text-sm font-semibold tracking-wide ${status.type === "success"
+        ? "bg-emerald-600 text-white shadow-sm"
+        : "bg-rose-600 text-white shadow-sm"
+        }`}
     >
       {status.message}
     </div>
@@ -93,7 +96,7 @@ function Header({ content }: { content: SiteContent }) {
           onClick={() => setMobileOpen(false)}
         >
           <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl border border-1 text-white transition-transform duration-300 group-hover:scale-105">
-            <div><img src="https://res.cloudinary.com/dw7elrwuy/image/upload/v1790411402/pointonepercentgrowth/branding/agency-logo.jpg"/></div>
+            <div><img src="https://res.cloudinary.com/dw7elrwuy/image/upload/v1790411402/pointonepercentgrowth/branding/agency-logo.jpg" /></div>
             <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
@@ -123,11 +126,10 @@ function Header({ content }: { content: SiteContent }) {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`relative rounded-full px-4 py-1.5 text-xs font-semibold transition-all duration-200 ${
-                  isActive
-                    ? "bg-slate-900 text-white shadow-sm"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
-                }`}
+                className={`relative rounded-full px-4 py-1.5 text-xs font-semibold transition-all duration-200 ${isActive
+                  ? "bg-slate-900 text-white shadow-sm"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
+                  }`}
               >
                 {item.label}
               </Link>
@@ -190,11 +192,10 @@ function Header({ content }: { content: SiteContent }) {
                 key={item.path}
                 href={item.path}
                 onClick={() => setMobileOpen(false)}
-                className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${
-                  pathname === item.path
-                    ? "bg-indigo-50 text-indigo-700"
-                    : "text-slate-700 hover:bg-slate-50"
-                }`}
+                className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${pathname === item.path
+                  ? "bg-indigo-50 text-indigo-700"
+                  : "text-slate-700 hover:bg-slate-50"
+                  }`}
               >
                 {item.label}
               </Link>
@@ -233,10 +234,8 @@ function Footer({ content }: { content: SiteContent }) {
           {/* Brand Info */}
           <div className="space-y-4 lg:col-span-4">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 text-white">
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
+              <div className="relative flex h-10 w-10 items-center justify-center rounded-full border border-1 text-white transition-transform duration-300 group-hover:scale-105">
+                <div className="rounded-full h-full w-full"><img src="https://res.cloudinary.com/dw7elrwuy/image/upload/v1790411402/pointonepercentgrowth/branding/agency-logo.jpg" /></div>
               </div>
               <span className="text-xl font-black tracking-tight text-white">.1% Growth</span>
             </div>
