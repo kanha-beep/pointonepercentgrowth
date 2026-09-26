@@ -5,7 +5,7 @@ import { SiteShell } from "@/components/site-shell";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: ".1% Growth | Graphic Design & UI/UX",
+  title: ".1%Growth | Graphic Design & UI/UX",
   description:
     "Explore our graphic design and UI/UX portfolio. Contact .1% Growth to discuss your next design project.",
   keywords: ["graphic design", "UI/UX design", "design portfolio", ".1% Growth"]

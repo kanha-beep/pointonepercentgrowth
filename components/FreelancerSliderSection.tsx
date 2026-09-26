@@ -56,7 +56,7 @@ const freelancers = [
     specialty: "Core Web Vitals • Local SEO • Headless",
     tag: "Speed Demon 🚀",
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+      "https://res.cloudinary.com/dw7elrwuy/image/upload/v1790411402/pointonepercentgrowth/branding/agency-logo.jpg"
   }
 ] as const;
 
@@ -65,21 +65,21 @@ function FreelancerCard({ freelancer }: { freelancer: (typeof freelancers)[numbe
     <article className="group relative w-[310px] shrink-0 rounded-3xl border-3 border-slate-900 bg-white p-5 shadow-[6px_6px_0px_0px_#0f172a] transition-all duration-300 hover:-translate-x-1.5 hover:-translate-y-2 hover:shadow-[10px_10px_0px_0px_#0f172a]">
       {/* 3D Image Container */}
       <div className="relative h-60 w-full overflow-hidden rounded-2xl border-2 border-slate-900 bg-slate-100">
-        <img
+        {/* <img
           src={freelancer.image}
           alt={freelancer.name}
           className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-        />
+        /> */}
 
         {/* Sticker Stamp */}
         <div className="absolute top-3 left-3 rounded-full border-2 border-slate-900 bg-amber-300 px-3 py-0.5 text-[11px] font-black uppercase text-slate-900 shadow-[2px_2px_0px_0px_#0f172a]">
           {freelancer.tag}
         </div>
 
-        <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full border-2 border-slate-900 bg-white px-2.5 py-0.5 text-xs font-black text-slate-900 shadow-[2px_2px_0px_0px_#0f172a]">
+        {/* <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-full border-2 border-slate-900 bg-white px-2.5 py-0.5 text-xs font-black text-slate-900 shadow-[2px_2px_0px_0px_#0f172a]">
           <span>⭐</span>
           <span>{freelancer.rating}</span>
-        </div>
+        </div> */}
       </div>
 
       {/* Info Section */}
