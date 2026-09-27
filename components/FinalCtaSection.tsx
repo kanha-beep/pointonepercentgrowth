@@ -6,7 +6,7 @@ export default function FinalCtaSection() {
     <section className="relative overflow-hidden py-24 lg:py-32">
       <div className="relative mx-auto w-[min(1240px,calc(100%-40px))]">
         <Reveal variant="zoom">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-tr from-slate-950 via-slate-900 to-[#1F30CC] px-8 py-16 text-center text-white shadow-[0_30px_90px_-20px_rgba(15,23,42,0.6)] sm:px-16 sm:py-24">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-tr bg-[#1F30CC] px-8 py-16 text-center text-white shadow-[0_30px_90px_-20px_rgba(15,23,42,0.6)] sm:px-16 sm:py-24">
             {/* Animated Background Mesh Orbs */}
             <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 animate-blob rounded-full bg-indigo-600/30 blur-3xl" />
             <div className="pointer-events-none absolute -right-20 -bottom-20 h-72 w-72 animate-blob rounded-full bg-violet-600/25 blur-3xl [animation-delay:4s]" />
