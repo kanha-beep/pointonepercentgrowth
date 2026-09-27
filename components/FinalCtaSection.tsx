@@ -10,9 +10,9 @@ export default function FinalCtaSection() {
           <div className="relative overflow-hidden rounded-3xl border border-[#1F30CC]/20 bg-slate-100 px-8 py-16 text-center text-slate-950 shadow-[0_30px_90px_-20px_rgba(31,48,204,0.25)] sm:px-16 sm:py-24">
 
             {/* Animated Background Mesh Orbs */}
-            <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 animate-blob rounded-full bg-[#1F30CC]/20 blur-3xl" />
+            <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 animate-blob rounded-full bg-slate-50 blur-3xl" />
 
-            <div className="pointer-events-none absolute -right-20 -bottom-20 h-72 w-72 animate-blob rounded-full bg-[#1F30CC]/15 blur-3xl [animation-delay:4s]" />
+            <div className="pointer-events-none absolute -right-20 -bottom-20 h-72 w-72 animate-blob rounded-full bg-slate-50 blur-3xl [animation-delay:4s]" />
 
             {/* Subtle SVG Grid Overlay */}
             <div className="pointer-events-none absolute inset-0 opacity-10 text-[#1F30CC]">
@@ -46,7 +46,7 @@ export default function FinalCtaSection() {
 
             <div className="relative z-10 mx-auto max-w-2xl">
 
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#1F30CC]/30 bg-[#1F30CC]/10 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#1F30CC] backdrop-blur-md">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#1F30CC]/30 bg-slate-50 px-4 py-1 text-xs font-bold uppercase tracking-wider text-[#1F30CC] backdrop-blur-md">
                 <span className="h-2 w-2 animate-ping rounded-full bg-[#1F30CC]" />
                 Start Growing Today
               </span>
