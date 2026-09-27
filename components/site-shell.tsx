@@ -237,7 +237,7 @@ function Footer({ content }: { content: SiteContent }) {
               <div className="relative flex h-10 w-10 items-center justify-center rounded-full border border-1 text-white transition-transform duration-300 group-hover:scale-105">
                 <div className="rounded-full h-full w-full"><img src="https://res.cloudinary.com/dw7elrwuy/image/upload/v1790411402/pointonepercentgrowth/branding/agency-logo.jpg" /></div>
               </div>
-              <span className="text-xl font-black tracking-tight text-white text-[#1F30CC]">.1% Growth</span>
+              <span className="text-xl font-black tracking-tight text-[#1F30CC]">.1%Growth</span>
             </div>
 
             <p className="max-w-sm text-sm leading-relaxed text-slate-400">
