@@ -31,7 +31,7 @@ export default function FinalCtaSection() {
 
               <h2 className="mt-6 text-3xl font-black tracking-tight sm:text-5xl sm:leading-tight">
                 Ready to Launch Your High-Converting{" "}
-                <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-[#1F30CC] bg-clip-text text-transparent">
                   Digital Presence?
                 </span>
               </h2>
