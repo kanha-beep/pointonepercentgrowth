@@ -8,7 +8,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/Reveal";
 import { siteContent } from "@/lib/site";
 
-const CATEGORIES = ["All", "Graphic", "UI/UX", "Software Development"] as const;
+const CATEGORIES = ["All", "Graphic", "UI/UX", "Software"] as const;
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");

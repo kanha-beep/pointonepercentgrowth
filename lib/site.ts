@@ -4,10 +4,20 @@ const connectedProjects = portfolioImages.map((image, index) => ({
   id: image.id,
   number: String(index + 1).padStart(2, "0"),
   title: image.title,
-  category: image.developer === "Lavanya" ? "Graphic" : "UI/UX",
+  category:
+    image.developer === "Lavanya"
+      ? "Graphic"
+      : image.developer === "Mahnoor"
+        ? "UI/UX"
+        : "Software",
   developer: image.developer,
   summary: `Portfolio work created by ${image.developer}.`,
-  gradient: image.developer === "Lavanya" ? "gradient-graphic" : "gradient-uiux",
+  gradient:
+    image.developer === "Lavanya"
+      ? "gradient-graphic"
+      : image.developer === "Mahnoor"
+        ? "gradient-uiux"
+        : "gradient-software",
   stats: [],
   ctaLabel: "View project",
   imageUrl: image.imageUrl,
@@ -33,7 +43,8 @@ export const siteContent: SiteContent = {
   hero: {
     eyebrow: "Graphic Design & UI/UX",
     title: "Good design. Clear communication.",
-    description: "Explore our graphic design and UI/UX work, and tell us what you would like to create.",
+    description:
+      "Explore our graphic design and UI/UX work, and tell us what you would like to create.",
     primaryCta: "View our work",
     secondaryCta: "Contact us",
   },
@@ -41,7 +52,11 @@ export const siteContent: SiteContent = {
     { value: String(portfolioImages.length), label: "portfolio images" },
     { value: "02", label: "design disciplines" },
   ],
-  highlights: ["Graphic design", "UI/UX design", "Direct contact with our team"],
+  highlights: [
+    "Graphic design",
+    "UI/UX design",
+    "Direct contact with our team",
+  ],
   story: {
     title: "Who we are",
     description:
@@ -65,10 +80,26 @@ export const siteContent: SiteContent = {
 
   projects: connectedProjects,
   process: [
-    { step: "01", title: "Explore our work", description: "Browse our Graphic and UI/UX projects." },
-    { step: "02", title: "Share your idea", description: "Tell us what you need and your timeline." },
-    { step: "03", title: "Design together", description: "Review the work and share your feedback." },
-    { step: "04", title: "Receive your designs", description: "Get the finished files for your project." },
+    {
+      step: "01",
+      title: "Explore our work",
+      description: "Browse our Graphic and UI/UX projects.",
+    },
+    {
+      step: "02",
+      title: "Share your idea",
+      description: "Tell us what you need and your timeline.",
+    },
+    {
+      step: "03",
+      title: "Design together",
+      description: "Review the work and share your feedback.",
+    },
+    {
+      step: "04",
+      title: "Receive your designs",
+      description: "Get the finished files for your project.",
+    },
   ],
   testimonials: [],
 };
