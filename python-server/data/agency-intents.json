@@ -1,0 +1,193 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good evening",
+        "namaste",
+        "hello can you help",
+        "hi mujhe help chahiye",
+        "hey there",
+        "what can you do"
+      ],
+      "response": "Hi! I can help with .1% Growth's Graphic Design, UI/UX, Software Development, Full-Stack Development, portfolio, process, pricing, and contact details. What would you like to know?"
+    },
+    {
+      "tag": "graphic_design",
+      "patterns": [
+        "what graphic design do you do",
+        "tell me about graphic design",
+        "do you make social media posts",
+        "can you design a logo",
+        "branding design",
+        "need posters for my business",
+        "design a brochure",
+        "graphic designer chahiye",
+        "mujhe graphics banwane hain",
+        "kya aap branding karte ho"
+      ],
+      "response": "We create graphic design for brands, including visual identity, social-media creatives, marketing material, and polished campaign assets. Visit Projects and select Graphic to see the work."
+    },
+    {
+      "tag": "ui_ux",
+      "patterns": [
+        "what is ui ux",
+        "tell me about ui ux design",
+        "do you design websites",
+        "can you design an app",
+        "need a mobile app design",
+        "website interface design",
+        "figma design service",
+        "ui ux designer chahiye",
+        "mujhe app ka design chahiye",
+        "user experience design"
+      ],
+      "response": "We design clear, user-friendly website and app interfaces. Our UI/UX work focuses on visual hierarchy, practical user journeys, and layouts that feel good on mobile and desktop."
+    },
+    {
+      "tag": "software_development",
+      "patterns": [
+        "do you build software",
+        "software development service",
+        "can you make a web application",
+        "need custom software",
+        "build a business system",
+        "develop an app for my company",
+        "software developer chahiye",
+        "mujhe software banwana hai",
+        "custom application",
+        "web app development"
+      ],
+      "response": "We can help plan and build custom software and web applications for business needs. Share your required features, users, and timeline through the Contact page or WhatsApp so we can discuss the right solution."
+    },
+    {
+      "tag": "full_stack_development",
+      "patterns": [
+        "what is full stack development",
+        "do you do full stack development",
+        "need a full stack developer",
+        "frontend and backend development",
+        "build frontend backend and database",
+        "can you make an api",
+        "complete website development",
+        "full stack developer chahiye",
+        "mujhe frontend backend dono chahiye",
+        "database and backend work"
+      ],
+      "response": "Our full-stack development work can cover the frontend interface, backend APIs, database, authentication, and deployment planning. Send your project requirements and we will discuss the suitable technical scope."
+    },
+    {
+      "tag": "portfolio",
+      "patterns": [
+        "show your work",
+        "where is your portfolio",
+        "can I see your projects",
+        "show me design examples",
+        "what have you designed",
+        "previous work",
+        "graphic design samples",
+        "ui ux case studies",
+        "portfolio kaha hai",
+        "aapka kaam dekhna hai"
+      ],
+      "response": "You can see our work on the Projects page. Use the Graphic or UI/UX filter to view the relevant portfolio images."
+    },
+    {
+      "tag": "project_process",
+      "patterns": [
+        "how do we start",
+        "what is your design process",
+        "how does a project work",
+        "what happens after I contact you",
+        "how long does design take",
+        "can I share my idea",
+        "project kaise start hoga",
+        "design process kya hai",
+        "brief kaise bheju",
+        "timeline kya hoti hai"
+      ],
+      "response": "Start by sharing your idea, goals, references, and timeline through the Contact page or WhatsApp. We discuss the scope, plan the design direction, share work for feedback, and deliver the final design files."
+    },
+    {
+      "tag": "pricing",
+      "patterns": [
+        "how much does design cost",
+        "what are your prices",
+        "give me a quote",
+        "price for logo design",
+        "ui ux cost",
+        "graphic design charges",
+        "budget for a project",
+        "kitna cost hoga",
+        "price batao",
+        "quotation chahiye"
+      ],
+      "response": "Pricing depends on the design scope, number of screens or assets, and timeline. Send your requirements through Contact or WhatsApp and we will discuss a suitable quote."
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "how can I contact you",
+        "phone number",
+        "email address",
+        "whatsapp number",
+        "I want to talk to your team",
+        "can I call you",
+        "contact details",
+        "aapse contact kaise karu",
+        "number bhejo",
+        "whatsapp karo"
+      ],
+      "response": "You can call or WhatsApp us at +91 7999046735, email pointonepercentgrowth@gmail.com, or send your project brief from the Contact page."
+    },
+    {
+      "tag": "office_hours",
+      "patterns": [
+        "what are your office hours",
+        "when are you open",
+        "what time do you close",
+        "are you available on saturday",
+        "working days",
+        "office timing",
+        "office kab khulta hai",
+        "kab mil sakte hain",
+        "aap kab available hote ho"
+      ],
+      "response": "Our studio hours are Monday to Saturday, 10:00 AM to 7:30 PM."
+    },
+    {
+      "tag": "office_location",
+      "patterns": [
+        "where is your office",
+        "office address",
+        "where are you located",
+        "studio location",
+        "where can I meet you",
+        "location batao",
+        "office kaha hai",
+        "lalghati address",
+        "aapka studio kaha hai"
+      ],
+      "response": "Our studio is in Lalghati. Please contact us before visiting so we can arrange a suitable time."
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thank you",
+        "thanks",
+        "thanks a lot",
+        "that was helpful",
+        "great thanks",
+        "dhanyavaad",
+        "shukriya",
+        "ok thank you",
+        "nice"
+      ],
+      "response": "You're welcome! If you have a project in mind, send us a message anytime."
+    }
+  ]
+}

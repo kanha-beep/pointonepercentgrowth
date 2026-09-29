@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 BASE_DIR=Path(__file__).resolve().parent
-DATA_PATH=BASE_DIR / "data" / "intents.json"
+DATA_PATH=BASE_DIR / "data" / "agency-intents.json"
 MODEL_DIR = BASE_DIR / "models"
 MODEL_PATH = MODEL_DIR / "chatbot.joblib"
 def train():
@@ -26,11 +26,16 @@ def train():
     # convert text into numbers
     model = Pipeline([
         (
-            "tfidf", TfidfVectorizer(lowercase=True, ngram_range=(1,2))
+            "tfidf", TfidfVectorizer(
+                lowercase=True,
+                ngram_range=(1, 2),
+                strip_accents="unicode",
+                sublinear_tf=True,
+            )
         ),
         (
             "classifier",
-            LogisticRegression(max_iter=1000),
+            LogisticRegression(max_iter=1000, class_weight="balanced"),
         )
     ])
     model.fit(x_train, y_train)
@@ -48,7 +53,7 @@ def train():
         },
         MODEL_PATH,
     )
-    print(f"Trained with {len(questions)} quesitons.")
+    print(f"Trained with {len(questions)} questions across {len(responses)} intents.")
     print(f"Saved model to: {MODEL_PATH}")
 
 if __name__ == "__main__":

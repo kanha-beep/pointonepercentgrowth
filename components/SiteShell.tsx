@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
 
-import { siteContent, type SiteContent } from "@/lib/site";
-import ChatbotWidget from "@/components/ChatbotWidget";
+import { siteContent, type SiteContent } from "../lib/site";
+import ChatbotWidget from "../components/ChatbotWidget";
 
 type StatusState = {
   type: "" | "success" | "error";
@@ -30,7 +30,8 @@ const footerGroups = [
   {
     title: "Our work", links: [
       { label: "Graphic Design", href: "/projects" },
-      { label: "UI/UX Design", href: "/projects" }
+      { label: "UI/UX Design", href: "/projects" },
+      { label: "Software Development", href: "/projects" }
     ]
   },
   {

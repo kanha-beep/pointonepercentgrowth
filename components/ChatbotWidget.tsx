@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import { useState, useRef, useEffect } from "react";
 
 type Message = {
@@ -15,6 +16,7 @@ type Message = {
 const SUGGESTED_CHIPS = [
   { label: "Graphic Design", query: "Tell me about graphic design" },
   { label: "UI/UX", query: "Tell me about UI/UX design" },
+  { label: "Software Development", query: "Tell me about Software Development" },
   { label: "Portfolio", query: "Where can I see your work?" },
   { label: "Contact", query: "How can I contact you?" }
 ];
@@ -61,13 +63,7 @@ export default function ChatbotWidget() {
     setIsTyping(true);
 
     try {
-      const res = await fetch("/api/chatbot", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: textToSend })
-      });
-
-      const data = await res.json();
+      const { data } = await axios.post("/api/chatbot", { message: textToSend });
       const botMsg: Message = {
         id: String(Date.now() + 1),
         sender: "bot",

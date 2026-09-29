@@ -15,9 +15,9 @@ const connectedProjects = portfolioImages.map((image, index) => ({
 export const siteContent: SiteContent = {
   businessName: ".1%Growth",
   tagline: "",
-  topLabel: "Graphic Design & UI/UX Portfolio",
+  topLabel: "Graphic Design, UI/UX, Software Development Portfolio",
   seoLine:
-    "Graphic design and UI/UX for your next project.",
+    "Graphic design, UI/UX, and Software Development for your next project.",
   contact: {
     email: "pointonepercentgrowth@gmail.com",
     phoneDisplay: "+91 7999046735",

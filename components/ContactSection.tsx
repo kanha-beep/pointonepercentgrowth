@@ -1,9 +1,10 @@
 "use client";
 
+import axios from "axios";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
 import Reveal from "@/components/Reveal";
-import { useEnquiryStatus } from "@/components/site-shell";
+import { useEnquiryStatus } from "@/components/EnquiryStatus";
 import type { EnquiryInput, SiteContent } from "@/lib/site";
 
 const initialForm: EnquiryInput = {
@@ -31,25 +32,17 @@ export default function ContactSection({ content }: { content: SiteContent }) {
     setStatus({ type: "", message: "" });
 
     try {
-      const response = await fetch("/api/enquiries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-
-      const data = (await response.json()) as { message?: string };
-
-      if (!response.ok) {
-        throw new Error(data.message || "Something went wrong while submitting your enquiry.");
-      }
+      await axios.post("/api/enquiries", formData);
 
       setStatus({ type: "success", message: "Your enquiry has been received! Our founders will contact you shortly." });
       setFormData(initialForm);
     } catch (error) {
-      setStatus({
-        type: "error",
-        message: error instanceof Error ? error.message : "Something went wrong while submitting your enquiry."
-      });
+      const message = axios.isAxiosError<{ message?: string }>(error)
+        ? error.response?.data?.message || error.message
+        : error instanceof Error
+          ? error.message
+          : "Something went wrong while submitting your enquiry.";
+      setStatus({ type: "error", message });
     } finally {
       setSubmitting(false);
     }

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { SiteShell } from "@/components/site-shell";
+import ChatbotWidget from "@/components/ChatbotWidget";
+import { EnquiryProvider, StatusBanner } from "@/components/EnquiryStatus";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -15,8 +18,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className="m-0 min-h-screen bg-[#fbf8f3] font-sans text-slate-900 antialiased">
-        <SiteShell>{children}</SiteShell>
+        <EnquiryProvider>
+          <div className="flex min-h-screen flex-col bg-[#fbf8f3] text-slate-900 selection:bg-indigo-500 selection:text-white">
+            <Header />
+            <StatusBanner />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <ChatbotWidget />
+          </div>
+        </EnquiryProvider>
       </body>
     </html>
-  );
+  )
 }

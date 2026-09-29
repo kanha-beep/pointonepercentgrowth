@@ -59,7 +59,7 @@ export default function FinalCtaSection() {
               </h2>
 
               <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
-                Tell us about your graphic design or UI/UX project. We will
+                Tell us about your graphic design, UI/UX, or Software Development project. We will
                 help you plan the next steps.
               </p>
 
@@ -98,7 +98,7 @@ export default function FinalCtaSection() {
               </div>
 
               {/* Guarantees */}
-              <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-500">
+              {/* <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-500">
 
                 <div className="flex items-center gap-1.5">
                   <svg
@@ -151,7 +151,7 @@ export default function FinalCtaSection() {
                   <span>100% Tested Production Quality</span>
                 </div>
 
-              </div>
+              </div> */}
             </div>
           </div>
         </Reveal>

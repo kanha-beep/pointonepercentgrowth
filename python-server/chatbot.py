@@ -9,10 +9,10 @@ if not MODEL_PATH.exists():
 saved_data = joblib.load(MODEL_PATH)
 model = saved_data["model"]
 responses = saved_data["responses"]
-CONFIDENCE_THRESHOLD = 0.25
+CONFIDENCE_THRESHOLD = 0.15
 FALLBACK_REPLY = (
     "I'm not sure about that. Could you ask about our "
-    "website packages, services, office hours, or contact details?"
+    "Graphic Design, UI/UX, Software Development, Full-Stack Development, portfolio, pricing, or contact details?"
 )
 def get_reply(message: str) -> dict:
     message = message.strip()
